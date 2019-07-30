@@ -2,34 +2,34 @@ Attribute VB_Name = "My_lib"
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' Mylib
-'   update: 2004.11.2  TŒW”ŠÖ”@•ÏXŒ³‚Ö–ß‚·i•û®‚P‚Öj@@s.f
-'   update: 2004.9.26  TŒW”ŠÖ”@•ÏX@i•û®‚Q‚Öj@s.f
-'   update: 2002.6.28  s.f. public sub cal_pid ’Ç‰Á
-'   update: 2002.6.20 D/Aƒtƒ‹ƒXƒP[ƒ‹•ÏX(10V for 400kgf)
-'   update: 2002.6.17 D/Aƒtƒ‹ƒXƒP[ƒ‹•ÏX02.6.17
-'   update: 2005.11. 6 s.f   ƒI[ƒo[ƒtƒ[‘Îô@@long,double‚Ö‘‚«‘Ö‚¦ r_z!(),s_drive,setcm1
-'   update: 2005.11.22 s.f   Melec C-870 counter“®ìƒoƒOC³@ƒRƒ“ƒyƒAƒJƒEƒ“ƒ^’lƒZƒbƒg@•„†”½“]@@setcm1
+'   update: 2004.11.2  T?W???Ö??@?ÏX???Ö–ß‚??i?ç·–ï½®ï¼‘?Öj?@?@s.f
+'   update: 2004.9.26  T?W???Ö??@?ÏX?@?i?ç·–ï½®ï¼’?Öj?@s.f
+'   update: 2002.6.28  s.f. public sub cal_pid ?Ç‰ï¾
+'   update: 2002.6.20 D/A?t???X?P?[???ÏX(10V for 400kgf)
+'   update: 2002.6.17 D/A?t???X?P?[???ÏX02.6.17
+'   update: 2005.11. 6 s.f   ?I?[?o?[?t???[?ÎîŒ°@?@long,double?Ö????Ö‚? r_z!(),s_drive,setcm1
+'   update: 2005.11.22 s.f   Melec C-870 counter???ãƒ»o?O?C???@?R???y?A?J?E???^?l?Z?b?g???@???????]?@?@setcm1
 '   update: 2005.11.23 s.f   rstcm1 tsuika
-'   update: 2005.11.26 s.f   ’è”‚Ì@”‰»
-'   update: 2005.12.23 s.f   longdata ŒvZ@1s@¨@3s
+'   update: 2005.11.26 s.f   ?è”?Ì@????
+'   update: 2005.12.23 s.f   longdata ?v?Z?@1?s?@???@3?s
 '   update: 2006. 5. 9 s.f    ppos = ppos & " r_z"
-'   update: 2006. 5.14 s.f @r_pres()‚Ì@DoEvents @ for‚ÌŠO‚ÖˆÚ“®@s.f  ‚à‚Ì‚·‚²‚­Œø‚­
-'@@@@@@@@@@@@@@‚·‚×‚Ä”²‚­‚Æ@LS_TC@ƒvƒƒOƒ‰ƒ€–\‘–‚·‚éiLS_SC‚Í@OK)f
-'   update: 2006. 5.23 s.f @cal_pid •ÏX
-'   update: 2006. 7.12 s.f @my_lib ‚Ì@r_z!()@w1,w2,w3 long ¨ integer
-'   update: 2008. 4.14 s.f.  cal_pid@speed’²®
-'   update: 2008. 6. 2 s.f   Melec C-870 counter“®ìƒoƒOC³@ƒRƒ“ƒyƒAƒJƒEƒ“ƒ^’lƒZƒbƒg@•„†”½“]@@setcm1 azd=-ad * gDirect ‚Ö
-'   update: 2008.11.17 s.f   cal_pid u800kgˆÈã‚Å”ñí’â~v@¨@u‚P‚O‚O‚OkgˆÈã‚Å”ñí’â~v‚Ö•ÏX
-'   update: 2009. 8.17 s.f   Timer2func ’Ç‰Á timer overflow ‘Îô
-'@ update: 2012.04.15.s.f.@1ton‰z‚¦‚Ì”»’f@‚P‰ñ¨2‰ñ‚Ö@@‚l‚™‚k‚‰‚‚
-'@ update: 2014.10.09.s.f.@1ton‰z‚¦‚Ì”»’f@‚P0‰ñX10‰ñ‚Ì•½‹Ï‚ª‚PtonˆÈã‚Ì@‚Pton’´‚¦@@‚l‚™‚k‚‰‚‚
+'   update: 2006. 5.14 s.f ?@r_pres()?Ì@DoEvents ?@ for?ÌŠO?ÖˆÚ“??@s.f  ?çƒ½ï¾Œ???????î˜¡ï½­
+'?@?@?@?@?@?@?@?@?@?@?@?@?@?@???×‚Ä”????Æ@LS_TC?@?v???O?????\?????é©•iLS_SC?Í@OK)?f
+'   update: 2006. 5.23 s.f ?@cal_pid ?ÏX
+'   update: 2006. 7.12 s.f ?@my_lib ?Ì@r_z!()?@w1,w2,w3 long ?? integer
+'   update: 2008. 4.14 s.f.  cal_pid?@speed????
+'   update: 2008. 6. 2 s.f   Melec C-870 counter???ãƒ»o?O?C???@?R???y?A?J?E???^?l?Z?b?g???@???????]?@?@setcm1 azd=-ad * gDirect ?ï¾–
+'   update: 2008.11.17 s.f   cal_pid ?u800kg?Èç¹§ï¾…?î„Šãƒ»ç«¡~?v?@???@?u?P?O?O?Okg?Èç¹§ï¾…?î„Šãƒ»ç«¡~?v?Ö•ÏX
+'   update: 2009. 8.17 s.f   Timer2func ?Ç‰ï¾ timer overflow ?Îãƒ»
+'?@ update: 2012.04.15.s.f.?@1ton?z???Ì”??f?@?P?îƒ¼ï½¨2?îƒ½ï¾–?@?@?l???k????
+'?@ update: 2014.10.09.s.f.?@1ton?z???Ì”??f?@?P0?îƒ”10?îƒ½ï¾Œ???Ï‚??Pton?Èç¹§ï¾Œ???@?Pton?????@?@?l???k????
 '
 '
 ''''''''''''''''''''''''''''''''''''''''''''''''''''
-Public Function Timer2func!()          'TimerŠÖ”overflow‘Îô
-   Tm2f1 = Timer                       'Timer‚ğ‚Q‰ñ“Ç‚İ@¬‚³‚¢•û‚ğ‚Æ‚éiˆÙí‚É‘å‚«‚¢’l‚ğ‚³‚¯‚éj
-   Tm2f1 = Timer                       'Timer‚ğ‚Q‰ñ“Ç‚İ@¬‚³‚¢•û‚ğ‚Æ‚éiˆÙí‚É‘å‚«‚¢’l‚ğ‚³‚¯‚éj
-   Timer2func = Tm2f1                  'ÀÛ‚É‚ÍA‚Q‰ñ“Ç‚İ@‚Q‰ñ–Ú‚ª¬‚³‚¯‚ê‚Î‚Q‰ñ–Ú‚Ì’l‚ğæ‚éB
+Public Function Timer2func!()          'Timer?Ö?overflow?Îãƒ»
+   Tm2f1 = Timer                       'Timer?îQ?î„ï¾‡?İ@???????ï¨›ãƒ»Æ‚é©•i?Ùå¢²ï¾‰?å‚«???l?â³‚??é©•j
+   Tm2f1 = Timer                       'Timer?îQ?î„ï¾‡?İ@???????ï¨›ãƒ»Æ‚é©•i?Ùå¢²ï¾‰?å‚«???l?â³‚??é©•j
+   Timer2func = Tm2f1                  '?Û‚É‚ÍA?Q?î„ï¾‡?İ@?Q?î„‘ï¾š?????????é»·ï¾?Q?î„‘ï¾š?Ì’l?îãƒ»é©•B
    Tm2f2 = 0                           '
    Tm2f2 = Timer
    Tm2f2 = Timer
@@ -39,10 +39,10 @@ Public Function r_z!()
    Dim LongData As Long
 '   Dim Longr_z As Long
 '   Dim w1, w2, w3  As Long
-   Dim w1, w2, w3  As Integer    ' 2006.7.12 s.f.OverFlow@‘Îô
+   Dim w1, w2, w3  As Integer    ' 2006.7.12 s.f.OverFlow?@?Îãƒ»
    If BrdFlg <> "ON" Then Exit Function
-  '-------------------------- ZˆÊ’u“Ç‚İæ‚è
-   Ack = MPL_IRDrive(hDev, MplData, MplResult)   'Œ»İˆÊ’u‚`‚c‚c‚q‚d‚r‚r‚Ì•\¦
+  '-------------------------- Z?Ê’u?Ç‚İè¬”ãƒ»
+   Ack = MPL_IRDrive(hDev, MplData, MplResult)   '???İˆÊ’u?`?c?c?q?d?r?r?Ì•\??
    w1 = MplData.MPL_Data(1)
    w2 = MplData.MPL_Data(2)
    w3 = MplData.MPL_Data(3)
@@ -51,10 +51,10 @@ Public Function r_z!()
    LongData = LongData + (w2 * idc256)  '2005.11. 6 s.f  2005.12.23
    LongData = LongData + w3             '2005.11. 6 s.f  2005.12.23
    If LongData > idc8388607 Then LongData = LongData - idc16777216
-'   r_z = -LongData / gRev2Disp@@f@@LS
+'   r_z = -LongData / gRev2Disp?@?@?f?@?@LS
    r_z = LongData / gRev2Disp   '  '08.3.25  NQD
    '
-   'If r_z > 0.1 Then OrgOFF      'Œ´“_LED@off  2002.10.9 KYOCERA
+   'If r_z > 0.1 Then OrgOFF      '???_LED?@off  2002.10.9 KYOCERA
    '
 End Function
 
@@ -66,32 +66,32 @@ Dim dt!(0 To 7)
 Dim adFlg As Long
   ppos = Left(ppos, 22) & " (r_pre)"
   sumdt10 = 0
-'  DoEvents              '@2006.5.14@ˆÚ“®  2006.5.18 íœ
+'  DoEvents              '?@2006.5.14?@?Ú“?  2006.5.18 ?íœ
   For l = 1 To 10
   sumdt1 = 0
    For ll = 1 To 10
     AdRead dt(), adFlg
-    dtrp = dt(2) * 500#     'D/Aƒtƒ‹ƒXƒP[ƒ‹•ÏX '08.4.22 NQD
+    dtrp = dt(2) * 500#     'D/A?t???X?P?[???ÏX '08.4.22 NQD
     sumdt1 = sumdt1 + dtrp
    Next ll
    sumdt1 = sumdt1 / 10#
 '    If sumdt1 > 1000# Then
 ''        AdRead dt(), adFlg
-''        dtrp = dt(2) * 500#     '1ton‰z‚¦@‚Q‰ñŠm”F‚Ö@2012.4.15
+''        dtrp = dt(2) * 500#     '1ton?z???@?Q?î„…m?F?Ö@2012.4.15
 ''        If dtrp > 1000# Then
 ''            gemgmsg = gemgmsg + "r_pres" + Format(dtrp, "0.0")   '2012.0830
-'            gemgmsg = gemgmsg + "r_pres" + Format(sumdt1, "0.0")   '2012.0830 10‰ñ•½‹Ï‚Ö
-'            iFlg_hijyou = 6       '  ”ñí’â~ r_pres 1ton‰z‚¦
+'            gemgmsg = gemgmsg + "r_pres" + Format(sumdt1, "0.0")   '2012.0830 10?ñ•½‹Ï‚ï¾–
+'            iFlg_hijyou = 6       '  ?î„Šãƒ»ç«¡~ r_pres 1ton?z??
 ''        End If
 '    End If
    sumdt10 = sumdt10 + sumdt1
 '
 '
   Next l
-  r_pres = sumdt10 / 10# - r_pres_kousei   '•½‹Ï   ‚OŸ‚Ì€‚ÍAŠe‹@ŠB‚Å”’l‚ğ‚İ‚ÄŒˆ‚ß‚éirobo“à‚Ìƒf[ƒ^j
+  r_pres = sumdt10 / 10# - r_pres_kousei   '???ï¾   ?O???Ì??ÍA?e?@?B?Å??l?îï¾?ÄŒ??ß‚é©•irobo?çƒ½ï¾Œ?f?[?^?j
     If r_pres > 1000# Then
-            gemgmsg = gemgmsg + "r_pres" + Format(sumdt1, "0.0")   '2012.0830 10‰ñ•½‹Ï‚Ö
-            iFlg_hijyou = 6       '  ”ñí’â~ r_pres 1ton‰z‚¦
+            gemgmsg = gemgmsg + "r_pres" + Format(sumdt1, "0.0")   '2012.0830 10?ñ•½‹Ï‚ï¾–
+            iFlg_hijyou = 6       '  ?î„Šãƒ»ç«¡~ r_pres 1ton?z??
     End If
 End Function
 
@@ -107,20 +107,20 @@ Dim pos, azd As Double
 '2002.10.9 KYOCERA
   sts = PCTrnsChk
   If sts = 1 Then
-    MsgBox "‚r‚p”À‘—’†I@‰^“]‘±s•s‰Â”\", vbCritical + vbOKOnly, "’v–½“IˆÙí"
+    MsgBox "?r?p?????I?@?^?]???s?s?Â”\", vbCritical + vbOKOnly, "?v???I?Ùãƒ»
     End
   End If
 
-'--------------- ‘¬“x‚Ìİ’è
+'--------------- ???x?Ìİ’ãƒ»
   hspd = v * gRev2Disp / 60
 '  If hspd > 400000 Then hspd = 400000  '02.5.11.sf
   If hspd > 800000 Then hspd = 800000
   If hspd < 77 Then hspd = 77
   
-  Call MplDataSet(hspd, MplData)      '‚h‚m‚b‚q‚d‚l‚d‚m‚s‚`‚k ‚h‚m‚c‚d‚w ‚c‚q‚h‚u‚d ‚b‚n‚l‚l‚`‚m‚c
-  Ack = MPL_IWDrive(hDev, &H8, MplData, MplResult)      '@&H8@highspeed@İ’è
+  Call MplDataSet(hspd, MplData)      '?h?m?b?q?d?l?d?m?s?`?k ?h?m?c?d?w ?c?q?h?u?d ?b?n?l?l?`?m?c
+  Ack = MPL_IWDrive(hDev, &H8, MplData, MplResult)      '?@&H8?@highspeed?@?İ’ãƒ»
   
-'--------------- ƒpƒ‹ƒX”‚ÌZo
+'--------------- ?p???X???ÌZ?o
   azd = az
   pos = r_z()
   k_puls = (azd - pos) * gRev2Disp + ddc05
@@ -128,14 +128,14 @@ Dim pos, azd As Double
   'idt1 = Int(k_puls * sn / idc65536)
   'idt2 = Int((k_puls * sn - idt1 * idc65536) / idc256)
   'idt3 = k_puls * sn - idt1 * idc65536 - idt2 * idc256
-'--------------- ƒCƒ“ƒNƒŠƒƒ“ƒg“®ì
+'--------------- ?C???N???????g???ãƒ»
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   'Data = idt1: Ack = MPL_BWDriveData1(hDev, Data, MplResult)   '
   'Data = idt2: Ack = MPL_BWDriveData2(hDev, Data, MplResult)   '
   'Data = idt3: Ack = MPL_BWDriveData3(hDev, Data, MplResult)   '
   'cmd = &H14: Ack = MPL_BWDriveCommand(hDev, cmd, MplResult)   '
-  Call MplDataSet(k_puls, MplData)                    '‚h‚m‚b‚q‚d‚l‚d‚m‚s‚`‚k ‚h‚m‚c‚d‚w ‚c‚q‚h‚u‚d ‚b‚n‚l‚l‚`‚m‚c
-  Ack = MPL_IWDrive(hDev, &H14, MplData, MplResult)  ' &H14:@index@drive
+  Call MplDataSet(k_puls, MplData)                    '?h?m?b?q?d?l?d?m?s?`?k ?h?m?c?d?w ?c?q?h?u?d ?b?n?l?l?`?m?c
+  Ack = MPL_IWDrive(hDev, &H14, MplData, MplResult)  ' &H14:?@index?@drive
 End Sub
 Public Sub rstcm1()
 Dim zclear!
@@ -147,28 +147,28 @@ Dim k_puls As Long
 Dim idt1, idt2, idt3, sn As Long
 Dim i%
 Dim azd As Double
-'--------------- “’Bƒpƒ‹ƒX‰‰Z
+'--------------- ???B?p???X???Z
   sn = 1
-'  azd = -az          ' ‰½ŒÌ‚¾‚©‰ğ‚ç‚È‚¢‚ª@u|v‚Å³í“®ì@@2005.11.22@‚“.‚†.
-'  azd = -az * gDirect        ' 2008.5.  NQD—§‚¿ã‚°‚Å@Ä“x‚ƒ‚‚‚counter‹@”\‚µ‚È‚¢B@•„†‚Ì–â‘èII@‚“.‚†.
-  azd = az            ' 2008.9.15 NQD-2 —§‚¿ã‚°‚Å@Ä“x‚ƒ‚‚‚counter‹@”\‚µ‚È‚¢B@ƒpƒ‹ƒX”‚Ì•„†‚Í@³@‚ª³‚µ‚¢I
+'  azd = -az          ' ???Ì‚????îãƒ»È‚????@?u?|?v?Å??í“®?ãƒ»@?@2005.11.22?@??.??.
+'  azd = -az * gDirect        ' 2008.5.  NQD?????ã‚°?Å@?Ä“x????????counter?@?\???È‚??B?@?????Ì–ç«­ãƒ»I?I?@??.??.
+  azd = az            ' 2008.9.15 NQD-2 ?????ã‚°?Å@?Ä“x????????counter?@?\???È‚??B?@?p???X???Ì•????Í@???@?????????I
   k_puls = azd * gRev2Disp + ddc05
-'  idt1 = Int(k_puls * sn / idc65536)@@@@@@@@@@@@f@2005.11.22@@MPL_IWCounter@ƒRƒ}ƒ“ƒh‚Ö‘‘Ö‚¦
+'  idt1 = Int(k_puls * sn / idc65536)?@?@?@?@?@?@?@?@?@?@?@?@?f?@2005.11.22?@?@MPL_IWCounter?@?R?}???h?Ö??Ö‚?
 '  idt2 = Int((k_puls * sn - idt1 * idc65536) / idc256)
 '  idt3 = k_puls * sn - idt1 * idc65536 - idt2 * idc256
-'--------------- ƒRƒ“ƒpƒŒ[ƒ^@‚Pİ’è
+'--------------- ?R???p???[?^?@?P?İ’ãƒ»
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
 '  Data = idt1: Ack = MPL_BWCounterData1(hDev, Data, MplResult)   '
 '  Data = idt2: Ack = MPL_BWCounterData2(hDev, Data, MplResult)   '
 '  Data = idt3: Ack = MPL_BWCounterData3(hDev, Data, MplResult)   '
 '  Cmd = &H1: Ack = MPL_BWCounterCommand(hDev, Cmd, MplResult)
-   Call MplDataSet(k_puls, MplData)                    '‚h‚m‚b‚q‚d‚l‚d‚m‚s‚`‚k ‚h‚m‚c‚d‚w ‚c‚q‚h‚u‚d ‚b‚n‚l‚l‚`‚m‚c
+   Call MplDataSet(k_puls, MplData)                    '?h?m?b?q?d?l?d?m?s?`?k ?h?m?c?d?w ?c?q?h?u?d ?b?n?l?l?`?m?c
    Ack = MPL_IWCounter(hDev, &H1, MplData, MplResult)
 End Sub
 Public Sub Counter0()
 Dim k_puls As Long
 Dim i%, idt1!, idt2!, idt3!, sn%
-'--------------- ƒJƒEƒ“ƒ^‚O
+'--------------- ?J?E???^?O
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Data = 0: Ack = MPL_BWCounterData1(hDev, Data, MplResult)   '
   Data = 0: Ack = MPL_BWCounterData2(hDev, Data, MplResult)   '
@@ -176,35 +176,35 @@ Dim i%, idt1!, idt2!, idt3!, sn%
   Cmd = 0: Ack = MPL_BWCounterCommand(hDev, Cmd, MplResult)
 End Sub
 Public Sub cal_pid(m_sa!, m_p!, m_lim!)
-'  float  m_sa,     /* İ’èˆ³—Í */
-'         m_p,      /* İ’è‚o’l */
-'         m_lim;    /* İ’èƒŠƒ~ƒbƒg’l */
+'  float  m_sa,     /* ?İ’èˆ³?ï¾ */
+'         m_p,      /* ?İ’é–§o?l */
+'         m_lim;    /* ?İ’èƒŠ?~?b?g?l */
 Dim i%, ch%, m_p1!, m_lim1!
-'Dim i%, nout%, ch%, v!    nout,v ‚ÍGlobaléŒ¾‚Ö 2004.3.12
-Dim pa!, per!       '/* floati’P¸“x•‚“®¬”“_Œ^)*/
+'Dim i%, nout%, ch%, v!    nout,v ?ï¾Global?éŒ¾?ï¾– 2004.3.12
+Dim pa!, per!       '/* float?i?P???x?????????_?^)*/
   ppos = ppos + "csub"
 '
-' ' –³•‰‰×‚ÌƒXƒs[ƒh‚Í@m_lim‚ÅŒˆ‚Ü‚éI
+' ' ?????×??ÌƒX?s?[?h?Í@m_lim?ÅŒ??Ü‚é©•I
 '
-  pa = r_pres()     '/* ˆ³—Í */
+  pa = r_pres()     '/* ???ï¾ */
 '
-  If ((pa > 1000#) Or (pa < -200#)) Then  '/* 1000‚j‚‡ˆÈã‚Å”ñí’â~ */ '081117
-'  If ((pa > 800#) Or (pa < -100#)) Then  '/* 800‚j‚‡ˆÈã‚Å”ñí’â~ */ '080510
-'  If pa > m_sa + 200# Then '/* w’èˆ³—Í + 200‚j‚‡ˆÈã‚Å”ñí’â~ */
+  If ((pa > 1000#) Or (pa < -200#)) Then  '/* 1000?j???Èç¹§ï¾…?î„Šãƒ»ç«¡~ */ '081117
+'  If ((pa > 800#) Or (pa < -100#)) Then  '/* 800?j???Èç¹§ï¾…?î„Šãƒ»ç«¡~ */ '080510
+'  If pa > m_sa + 200# Then '/* ?w?èˆ³?ï¾ + 200?j???Èç¹§ï¾…?î„Šãƒ»ç«¡~ */
   gemgmsg = gemgmsg + "cal_pid" + Format(pa, "0.0")   '2012.0805
-  hijyou                  ' 2012.0806.  -200ˆÈ‰º@’Ç‰Á
+  hijyou                  ' 2012.0806.  -200?È‰??@?Ç‰ï¾
     Exit Sub
   End If
 
-'/* ‚o‚h‚c‰‰Z */               f@per‚Ì’l‚Ì‘å‚«‚³‚Í@‰Áˆ³§Œä‚Ì×‚©‚³
+'/* ?o?h?c???Z */               ?f?@per?Ì’l?Ì‘å‚«???Í@?H????è‰ªï¾Œ?×‚???
   ppos = ppos + "1"
-'  per = 2 * 5 * (m_sa - pa) * Abs(m_sa - pa) / (m_p1 * m_p1)  ' 2008.4.14 NQD@speed’²®
-  per = 5 * (m_sa - pa) * Abs(m_sa - pa) / (m_p * m_p) ' 2008.4.14 NQD@speed’²®
+'  per = 2 * 5 * (m_sa - pa) * Abs(m_sa - pa) / (m_p1 * m_p1)  ' 2008.4.14 NQD?@speed????
+  per = 5 * (m_sa - pa) * Abs(m_sa - pa) / (m_p * m_p) ' 2008.4.14 NQD?@speed????
   If per > m_lim Then per = m_lim
-  If per < (-1# * m_lim) Then per = -1# * m_lim     ' 2006.5.23 #’Ç‰Á
+  If per < (-1# * m_lim) Then per = -1# * m_lim     ' 2006.5.23 #?Ç‰ï¾
 '
-'  per = per * gDirect     'S.M‚Ì‰ñ“]•ûŒü (+1 or -1)      ' 2008.3 NQD1-tsubaki
-  per = -per               'S.M‚Ì‰ñ“]•ûŒü (+1 or -1)      ' 2008.9.12 NQD2 -touei
+'  per = per * gDirect     'S.M?Ì‰î„]?ç¶·ãƒ»(+1 or -1)      ' 2008.3 NQD1-tsubaki
+  per = -per               'S.M?Ì‰î„]?ç¶·ãƒ»(+1 or -1)      ' 2008.9.12 NQD2 -touei
 '
   'nout = Int(40.95 * per) + &H800
   ppos = ppos + "2"
@@ -216,20 +216,20 @@ Dim pa!, per!       '/* floati’P¸“x•‚“®¬”“_Œ^)*/
   DaOut ch, Hex(nout)
   
 End Sub
-Public Function T_keisu_cset!(t0cs!, tccs!)       ' 05.11.26@s.f.@@overflow ‘Îô uIv‚Â‚¯‚é
-' /*  Vİ’è‰·“x‰·“xŒW”–İ’è‰·“x@@‚Ì@ŒvZ
-' /* t00=@İ’è‰·“x
-' /* tc=@‰·“xŒW”
+Public Function T_keisu_cset!(t0cs!, tccs!)       ' 05.11.26?@s.f.?@?@overflow ?Îãƒ»?u?I?v?Â‚??ãƒ»
+' /*  ?V?İ’è‰·?x?????x?W?????İ’è‰·?x?@?@?Ì@?v?Z
+' /* t00=?@?İ’è‰·?x
+' /* tc=?@???x?W??
 '  Dim t0cs!, tccs!, abs0!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'  ŒvZ•û®@‚P@@â‘Î—ë“x‚©‚ç‚Ì@”ä—á
+'  ?v?Z?ç·–ï½®ã€€?P?@?@?ç«­ï¾?ãƒ»x???è½¤ï¾Œ?@?èŒƒãƒ»
   Dim abs0!
    abs0 = -273#
 '
    T_keisu_cset = (t0cs - abs0) * tccs + abs0
 '
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'  ŒvZ•û®@‚Q@@‰·“xŒW”’l•ª‚¾‚¯@ƒVƒtƒg
+'  ?v?Z?ç·–ï½®ã€€?Q?@?@???x?W???l???????@?V?t?g
 '
 '  Dim kijyun!, sa!
 '
@@ -238,20 +238,20 @@ Public Function T_keisu_cset!(t0cs!, tccs!)       ' 05.11.26@s.f.@@overflow ‘
 '   T_keisu_cset = t0cs + (tccs - kijyun) * 100
 '
 End Function
-Public Function T_keisu_cread!(t0cr!, tccr!)    ' 05.11.26@s.f.@@overflow ‘Îô uIv‚Â‚¯‚é
-' /*  VŒ»İ‰·“xŒ»İ‰·“x/‰·“xŒW”@@‚Ì@ŒvZ
-' /* t00=@İ’è‰·“x
-' /* tc=@‰·“xŒW”
+Public Function T_keisu_cread!(t0cr!, tccr!)    ' 05.11.26?@s.f.?@?@overflow ?Îãƒ»?u?I?v?Â‚??ãƒ»
+' /*  ?V???İ‰??x?????İ‰??x/???x?W???@?@?Ì@?v?Z
+' /* t00=?@?İ’è‰·?x
+' /* tc=?@???x?W??
 '  Dim t0cr!, tccr!, abs0!
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'  ŒvZ•û®@‚P@@â‘Î—ë“x‚©‚ç‚Ì@”ä—á
+'  ?v?Z?ç·–ï½®ã€€?P?@?@?ç«­ï¾?ãƒ»x???è½¤ï¾Œ?@?èŒƒãƒ»
   Dim abs0!
 '
    abs0 = -273#
 '
    T_keisu_cread = (t0cr - abs0) / tccr + abs0
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'  ŒvZ•û®@‚Q@@‰·“xŒW”’l•ª‚¾‚¯@ƒVƒtƒg
+'  ?v?Z?ç·–ï½®ã€€?Q?@?@???x?W???l???????@?V?t?g
 '
 '  Dim kijyun!, sa!
 '  kijyun = 1#

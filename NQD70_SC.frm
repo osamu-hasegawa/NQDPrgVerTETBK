@@ -210,10 +210,10 @@ Begin VB.Form NQD70_SC
       Width           =   500
    End
    Begin VB.CommandButton Command2 
-      Caption         =   "Save"
+      Caption         =   "PlotDataSave"
       BeginProperty Font 
          Name            =   "ＭＳ Ｐゴシック"
-         Size            =   10.8
+         Size            =   7.8
          Charset         =   128
          Weight          =   700
          Underline       =   0   'False
@@ -282,9 +282,9 @@ Begin VB.Form NQD70_SC
       EndProperty
       Height          =   300
       Index           =   4
-      Left            =   120
+      Left            =   0
       TabIndex        =   56
-      Top             =   1200
+      Top             =   1320
       Visible         =   0   'False
       Width           =   1692
    End
@@ -305,7 +305,7 @@ Begin VB.Form NQD70_SC
       Left            =   120
       Style           =   1  'ｸﾞﾗﾌｨｯｸｽ
       TabIndex        =   54
-      Top             =   960
+      Top             =   1080
       Width           =   1440
    End
    Begin VB.Timer Timer1 
@@ -2862,6 +2862,7 @@ Dim zclear!
 Dim idum%, iidum%       ' 090803 tsuika
 Dim tudiffTime!
 Dim iSento_flg%         ' 先頭ダミーﾌﾗｸﾞ
+Dim zzz!    ' 2013.4.6 高さ到達時の　Ｚ座標値  SP7  180901
 '
  On Error GoTo errHandler:
 ' ---  init  val-----------------
@@ -3353,7 +3354,9 @@ TimeUpEnd:
              ppos = "SC JkE1 sts=C870"
          If (sts And &H1) <> 0 Then      ' 成立で「-1」　　不成立で「0」
             ist0 = ist0 + 1             '/* 位置達成で終了 */
-            Label2(6).Caption = "位置 pass CNT " & Str(ist0)   '11/2 sf
+            zzz = r_z()
+            Label2(6).Caption = "位置 pass CNT " & Str(ist0) & " " & Str(zzz)   '11/2 sf & SP7  180901
+'            Label2(6).Caption = "位置 pass CNT " & Str(ist0)   '11/2 sf
             rstcm1   '  compareter reset
 '            Ready_Wait    '
          Else                       ' 2008.2.21  変更　１秒に１回行き過ぎを確認へ
@@ -3379,7 +3382,9 @@ TimeUpEnd:
            ppos = "SC JkE3 sts=C870"
           If (sts And &H1) <> 0 Then
             ist0 = ist0 + 1             '/* 位置達成で終了 */
-            Label2(6).Caption = "位置 pass CNT " & Str(ist0)   '11/2 sf
+            zzz = r_z()
+            Label2(6).Caption = "位置 pass CNT " & Str(ist0) & " " & Str(zzz)   '11/2 sf & SP7 180901
+'            Label2(6).Caption = "位置 pass CNT " & Str(ist0)   '11/2 sf
             rstcm1   '  compareter reset
          Else                       ' 2008.2.21  変更　１秒に１回行き過ぎを確認へ
            If Int(mTime) = Int(Timer) Then
@@ -3420,7 +3425,9 @@ TimeUpEnd:
           sts = C870Sts(3)  'status3 を読む
           If (sts And &H1) <> 0 Then
             ist0 = ist0 + 1             '/* 位置達成で終了 */
-            Label2(6).Caption = "位置 pass CNT " & Str(ist0)   '11/2 sf
+             zzz = r_z()
+            Label2(6).Caption = "位置 pass CNT " & Str(ist0) & " " & Str(zzz)   '11/2 sf & SP7  180901
+'           Label2(6).Caption = "位置 pass CNT " & Str(ist0)   '11/2 sf
             rstcm1   '  compareter reset
 '            Ready_Wait    '
 '            Do                 'Do Loop  ' 2005.11.22 削除　　一度読んだらstatusはresetされる。2度読み不可！！
@@ -4209,7 +4216,8 @@ send:
       Rec_of_Mold = Rec_of_Mold & "  " & Format(cp_z, "000.000") & " "
       Rec_of_Mold = Rec_of_Mold & "  " & Format(Int(stime / 60), "0") & ":" & Format(Int(stime) Mod 60, "00") & " "
       Rec_of_Mold = Rec_of_Mold & "  " & Format(T_keisu(T_keisuCont(1) - 1), "0.000") & "    " & Format(Z3_Hosei(T_keisuCont(1) - 1), "0.000")
-      Rec_of_Mold = Rec_of_Mold & "  " & Format(avekatJ(T_keisuCont(1) - 1), "000") & "  " & Format(iHoonStopNo, "###0")
+      Rec_of_Mold = Rec_of_Mold & "  " & Format(avekatJ(T_keisuCont(1) - 1), "000") & "  " & Format(iHoonStopNo, "###0") & "  " & Format(zzz, "000.000")  'SP7 180901
+'      Rec_of_Mold = Rec_of_Mold & "  " & Format(avekatJ(T_keisuCont(1) - 1), "000") & "  " & Format(iHoonStopNo, "###0")
       If AlmON = True Then Rec_of_Mold = Rec_of_Mold & "  " & Almdisp
       List1.AddItem Rec_of_Mold, 0    ' ”、0”　追加　2004.8.18
 '

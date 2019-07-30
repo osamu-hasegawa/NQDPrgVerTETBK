@@ -1,24 +1,24 @@
 Attribute VB_Name = "MplBDef"
 '
-'   2005.11.22  s.f    ”’l‚Ì‚„‚ƒ‰»
-'   2005.11.26  s.f    function ‚Ì@Œ^éŒ¾
+'   2005.11.22  s.f    ???l?Ì‚?????
+'   2005.11.26  s.f    function ?Ì@?^?éŒ¾
 '
 '
 '*************************************************************************************************************************
-'@‚l‚o‚k \‘¢‘ÌAŠÖ”’è‹`
+'?@?l?o?k ?\???ÌA?Ö??é—`
 '*************************************************************************************************************************
 
-'**** RESULT \‘¢‘Ì ****
+'**** RESULT ?\???ï¾Œ ****
 Type MPL_S_RESULT
    MPL_Result(1 To 4) As Integer
 End Type
 
-'**** DATA \‘¢‘Ì ****
+'**** DATA ?\???ï¾Œ ****
 Type MPL_S_DATA
    MPL_Data(1 To 4) As Integer
 End Type
 
-'**** ’è”’è‹` ****
+'**** ?è”?é—` ****
 Public Const MPL_X As Integer = 0
 Public Const MPL_Y As Integer = 1
 Public Const MPL_Z As Integer = 2
@@ -41,7 +41,7 @@ Public Const MPL_PORT As Integer = 0
 Public Const MPL_PORT1 As Integer = 0
 Public Const MPL_PORT2 As Integer = 1
 
-'**** ŠÖ”’è‹` ****
+'**** ?Ö??é—` ****
 Declare Function MPL_BOpen Lib "MplB.dll" (ByVal hWnd As Long, ByVal BoardNo As Integer, ByVal Axis As Integer, phDev As Long, psResult As MPL_S_RESULT) As Boolean
 Declare Function MPL_BClose Lib "MplB.dll" (ByVal hDev As Long, psResult As MPL_S_RESULT) As Boolean
 Declare Function MPL_IWDrive Lib "MplB.dll" (ByVal hDev As Long, ByVal Cmd As Integer, psData As MPL_S_DATA, psResult As MPL_S_RESULT) As Boolean
@@ -77,9 +77,9 @@ Declare Function MPL_Outp Lib "MplB.dll" (ByVal BoardNo As Integer, pData As Int
 Declare Function MPL_OutpEx Lib "MplB.dll" (ByVal BoardNo As Integer, ByVal PortNo As Integer, pData As Integer, psResult As MPL_S_RESULT) As Boolean
 
 '
-'Global Const idc16777216 As Long = 16777216  '@ƒI[ƒo[ƒtƒ[‘Îô‚Å’Ç‰Á  2005.11.22                 ‚±‚Ì‰º4sPGM_KTD@‚ÅéŒ¾
-'Global Const idc8388607 As Long = 8388607  '@ƒI[ƒo[ƒtƒ[‘Îô‚Å’Ç‰Á  2005.11.22
-'Global Const idc65536  As Long = 65536  '@ƒI[ƒo[ƒtƒ[‘Îô‚Å’Ç‰Á@‚±‚Ì‰º‚Rs@2005.11.6@‚“D‚†
+'Global Const idc16777216 As Long = 16777216  '?@?I?[?o?[?t???[?ÎîŒ±ï¾…?Ç‰ï¾  2005.11.22                 ???Ì‰?4?sPGM_KTD?@?ÅéŒ¾
+'Global Const idc8388607 As Long = 8388607  '?@?I?[?o?[?t???[?ÎîŒ±ï¾…?Ç‰ï¾  2005.11.22
+'Global Const idc65536  As Long = 65536  '?@?I?[?o?[?t???[?ÎîŒ±ï¾…?Ç‰A@???Ì‰??R?s?@2005.11.6?@???D??
 'Global Const idc256 As Long = 256
 ''
 Global Ack As Boolean
@@ -93,7 +93,7 @@ Global StopFlag As Integer
 
 Public Sub C870Open()
   If BrdFlg <> "ON" Then Exit Sub
-   Ack = MPL_BOpen(MplVbSmp.hWnd, 0, MPL_X, hDev, MplResult)  'ƒfƒoƒCƒXƒI[ƒvƒ“
+   Ack = MPL_BOpen(MplVbSmp.hWnd, 0, MPL_X, hDev, MplResult)  '?f?o?C?X?I?[?v??
         'MPL_BOpen(Smp1.hWnd, 0, MPL_X, hDev, MplResult)
 End Sub
 Public Sub C870Close()
@@ -102,12 +102,12 @@ Public Sub C870Close()
 End Sub
 Public Sub C870Reset()
   If BrdFlg <> "ON" Then Exit Sub
-  Call MplDataSet(0, MplData)                        '‚`‚c‚c‚q‚d‚r‚r ‚h‚m‚h‚s‚`‚k‚h‚y‚d ‚b‚n‚l‚l‚`‚m‚c
+  Call MplDataSet(0, MplData)                        '?`?c?c?q?d?r?r ?h?m?h?s?`?k?h?y?d ?b?n?l?l?`?m?c
   Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
   Ack = MPL_IWDrive(hDev, &H3, MplData, MplResult)
   Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
 
-  Call MplDataSet(0, MplData)                        '‚b‚n‚t‚m‚s‚d‚q ‚o‚q‚d‚r‚d‚s ‚b‚n‚l‚l‚`‚m‚c
+  Call MplDataSet(0, MplData)                        '?b?n?t?m?s?d?q ?o?q?d?r?d?s ?b?n?l?l?`?m?c
   Ack = MPL_IWCounter(hDev, &H0, MplData, MplResult)
 End Sub
 Public Sub Ccw_Index(Mel As Object)
@@ -115,7 +115,7 @@ Public Sub Ccw_Index(Mel As Object)
    Mel.Message_Label.Caption = ""
    'Call Btn_Drive_Set
    Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
-   Call MplDataSet(-240000 * 1, MplData)                  '‚h‚m‚b‚q‚d‚l‚d‚m‚s‚`‚k ‚h‚m‚c‚d‚w ‚c‚q‚h‚u‚d ‚b‚n‚l‚l‚`‚m‚c
+   Call MplDataSet(-240000 * 1, MplData)                  '?h?m?b?q?d?l?d?m?s?`?k ?h?m?c?d?w ?c?q?h?u?d ?b?n?l?l?`?m?c
    Ack = MPL_IWDrive(hDev, &H14, MplData, MplResult)
    'Call Ready_Wait
    Drive_Stop_Disp Mel
@@ -127,7 +127,7 @@ Public Sub Cw_Index(Mel As Object)
    Mel.Message_Label.Caption = ""
    'Call Btn_Drive_Set
    Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
-   Call MplDataSet(240000 * 1, MplData)                '‚h‚m‚b‚q‚d‚l‚d‚m‚s‚`‚k ‚h‚m‚c‚d‚w ‚c‚q‚h‚u‚d ‚b‚n‚l‚l‚`‚m‚c
+   Call MplDataSet(240000 * 1, MplData)                '?h?m?b?q?d?l?d?m?s?`?k ?h?m?c?d?w ?c?q?h?u?d ?b?n?l?l?`?m?c
    Ack = MPL_IWDrive(hDev, &H14, MplData, MplResult)
    'Call Ready_Wait
    Drive_Stop_Disp Mel
@@ -138,19 +138,19 @@ Public Sub Drive_Stop_Disp(Mel As Object)
   If BrdFlg <> "ON" Then Exit Sub
    Ack = MPL_BRStatus1(hDev, Status1, MplResult)
    If (Status1 And &H20) <> 0 Then
-      Mel.Message_Label.Caption = "LIMIT‚ª“ü—Í‚³‚ê‚Ü‚µ‚½B"
+      Mel.Message_Label.Caption = "LIMIT???ãƒ»ï¾???é»·ï¾œ?????B"
    ElseIf (Status1 And &H80) <> 0 Then
-      Mel.Message_Label.Caption = "FS STOP‚ª“ü—Í‚³‚ê‚Ü‚µ‚½B"
+      Mel.Message_Label.Caption = "FS STOP???ãƒ»ï¾???é»·ï¾œ?????B"
    ElseIf (Status1 And &H40) <> 0 Then
-      Mel.Message_Label.Caption = "SL STOP‚ª“ü—Í‚³‚ê‚Ü‚µ‚½B"
+      Mel.Message_Label.Caption = "SL STOP???ãƒ»ï¾???é»·ï¾œ?????B"
    Else
-      Mel.Message_Label.Caption = "DRIVE‚ªI—¹‚µ‚Ü‚µ‚½B"
+      Mel.Message_Label.Caption = "DRIVE???I?????Ü‚????B"
    End If
 End Sub
 
 '*************************************************************
 '
-' ‚l‚b‚b‚O‚T‚ª‚q‚d‚`‚c‚xó‘Ô‚É‚È‚é‚Ü‚Å‘Ò‚ÂB
+' ?l?b?b?O?T???q?d?`?c?x?îŠ„ï¾”?É‚È‚é©ï¾œ?Å‘Ò‚ÂB
 '
 '*************************************************************
 '
@@ -159,21 +159,21 @@ Public Sub Ready_Wait()
   If BrdFlg <> "ON" Then Exit Sub
    Do
       DoEvents
-      'Ack = MPL_IRDrive(hDev, MplData, MplResult)     'Œ»İˆÊ’u‚`‚c‚c‚q‚d‚r‚r‚Ì•\¦
+      'Ack = MPL_IRDrive(hDev, MplData, MplResult)     '???İˆÊ’u?`?c?c?q?d?r?r?Ì•\??
       'Mel.Addr_Label.Caption = MplDataGet(MplData)
       Ack = MPL_BRStatus1(hDev, Status1, MplResult)
    Loop While (Status1 And &H1) <> 0
-   'Ack = MPL_IRDrive(hDev, MplData, MplResult)         'Œ»İˆÊ’u‚`‚c‚c‚q‚d‚r‚r‚Ì•\¦
+   'Ack = MPL_IRDrive(hDev, MplData, MplResult)         '???İˆÊ’u?`?c?c?q?d?r?r?Ì•\??
    'Mel.Addr_Label.Caption = MplDataGet(MplData)
 End Sub
 
 Public Sub C870Stop()
 Dim Cmd%
-   Cmd = &HFF                                      '‚d‚l‚r‚s‚n‚o ‚b‚n‚l‚l‚`‚m‚c
+   Cmd = &HFF                                      '?d?l?r?s?n?o ?b?n?l?l?`?m?c
    Ack = MPL_BWDriveCommand(hDev, Cmd, MplResult)
    StopFlag = 1
 End Sub
-Public Function C870Sts%(no%)     '  05.11.26  u%v@’Ç‰Á
+Public Function C870Sts%(no%)     '  05.11.26  ?u%?v?@?Ç‰ï¾
 Dim status As Integer
   Select Case no
   Case 1
@@ -192,7 +192,7 @@ End Function
 Public Sub C870AccRate()
 Dim Data%
   If BrdFlg <> "ON" Then Exit Sub
-'/* ‰ÁŒ¸‘¬Ú°Ä¾¯ÄºÏİÄŞ */
+'/* ?L???Ú°Ä¾?Äºï¾ï¾ï¾„ï¾ */
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
 ' Data = 0: Ack = MPL_BWDriveData1(hDev, Data, MplResult)    '
   Data = 6: Ack = MPL_BWDriveData2(hDev, Data, MplResult)     'outp(AX_DT3,6);       /* 3.0ms /1000PPS */
@@ -202,7 +202,7 @@ End Sub
 
 Public Sub C870LSPDSet(vel As Long)
 Dim Data%
-'/* ‘¬“xİ’è */
+'/* ???x?İ’ãƒ»*/
   If BrdFlg <> "ON" Then Exit Sub
   Call MplDataSet(vel, MplData)
   Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
@@ -216,14 +216,14 @@ Dim Data%
 End Sub
 Public Sub C870HSPDSet(vel As Long)
 Dim Data%
-'/* ‘¬“xİ’è HSPD */
+'/* ???x?İ’ãƒ»HSPD */
   If BrdFlg <> "ON" Then Exit Sub
   Call MplDataSet(vel, MplData)
   Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
   Cmd = &H8: Ack = MPL_IWDrive(hDev, Cmd, MplData, MplResult)
 End Sub
 Public Sub C870DelayTime()
-'/* ƒfƒBƒŒ[ƒ^ƒCƒ€İ’è */
+'/* ?f?B???[?^?C???İ’ãƒ»*/
   If BrdFlg <> "ON" Then Exit Sub
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Data = 10: Ack = MPL_BWDriveData1(hDev, Data, MplResult)     'outp(AX_DT1,0x0a);    /* limit delay time 50ms */
@@ -233,7 +233,7 @@ Public Sub C870DelayTime()
 End Sub
 '*******************************************************************************************************
 '
-' ‚k‚‚‚‡Œ^ ‚c‚`‚s‚`iˆø”‚Åw’èj‚ğ‚l‚o‚k ‚c‚`‚s‚`\‘¢‘Ìiˆø”‚Åw’èj‚ÉŠi”[‚·‚éB
+' ?k???????^ ?c?`?s?`?i?î˜¯ç‹½ï¾…?w?é–¨j?îl?o?k ?c?`?s?`?\???Ìi?î˜¯ç‹½ï¾…?w?é–¨j?ÉŠi?[???é©•B
 '
 '*******************************************************************************************************
 '
@@ -251,7 +251,7 @@ Public Sub MplDataSet(ByVal LongData As Long, MplData As MPL_S_DATA)
    MplData.MPL_Data(3) = w3
 End Sub
 '******************************************************************************************************
-' ‚l‚o‚k ‚c‚`‚s‚`”z—ñiˆø”‚Åw’èj‚Ì“à—e‚ğ‚k‚‚‚‡Œ^‚c‚`‚s‚`‚É•ÏŠ·‚µ•Ô’l‚·‚éB
+' ?l?o?k ?c?`?s?`?z?îƒ¼i?î˜¯ç‹½ï¾…?w?é–¨j?Ì“ç‡‰e?îk???????^?c?`?s?`?É•ÏŠ????Ô’l???é©•B
 '******************************************************************************************************
 '
 Public Function MplDataGet(MplData As MPL_S_DATA) As Long
@@ -269,7 +269,7 @@ End Function
 Public Sub C870AdrInit()
 '-----------
   If BrdFlg <> "ON" Then Exit Sub
-  Call MplDataSet(0, MplData)                        '‚`‚c‚c‚q‚d‚r‚r ‚h‚m‚h‚s‚`‚k‚h‚y‚d ‚b‚n‚l‚l‚`‚m‚c
+  Call MplDataSet(0, MplData)                        '?`?c?c?q?d?r?r ?h?m?h?s?`?k?h?y?d ?b?n?l?l?`?m?c
   Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
   Ack = MPL_IWDrive(hDev, &H3, MplData, MplResult)
   Ack = MPL_BWaitDriveCommand(hDev, 0, MplResult)
@@ -277,12 +277,12 @@ End Sub
 Public Sub C870CntPreSet(cnt As Long)
 '-----------
   If BrdFlg <> "ON" Then Exit Sub
-  Call MplDataSet(cnt, MplData)                        '‚b‚n‚t‚m‚s‚d‚q ‚o‚q‚d‚r‚d‚s ‚b‚n‚l‚l‚`‚m‚c
+  Call MplDataSet(cnt, MplData)                        '?b?n?t?m?s?d?q ?o?q?d?r?d?s ?b?n?l?l?`?m?c
   Ack = MPL_IWCounter(hDev, &H0, MplData, MplResult)
 End Sub
 Public Sub C870OrgVelSet()
 Dim Data%
-'/* Œ´“_—p‘¬“xİ’è */
+'/* ???_?p???x?İ’ãƒ»*/
   If BrdFlg <> "ON" Then Exit Sub
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Data = 1: Ack = MPL_BWDriveData1(hDev, Data, MplResult)     '
@@ -298,7 +298,7 @@ Dim Data%
 End Sub
 Public Sub C870ManVelSet()
 Dim Data%
-'/* Œ´“_—p‘¬“xİ’è */
+'/* ???_?p???x?İ’ãƒ»*/
   If BrdFlg <> "ON" Then Exit Sub
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Data = 0: Ack = MPL_BWDriveData1(hDev, Data, MplResult)     '
@@ -312,7 +312,7 @@ Public Sub C870Genten()
 '--------------
 Dim i%, Data%, Cmd%
   If BrdFlg <> "ON" Then Exit Sub
-'/* Œ´“_—p‘¬“x‚Ö•ÏX */
+'/* ???_?p???x?Ö•ÏX */
 
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Data = 0: Ack = MPL_BWDriveData1(hDev, Data, MplResult)   'outp(AX_DT1,0);
@@ -329,10 +329,10 @@ Dim i%, Data%, Cmd%
 '--------- ORIGIN FLAG RESET
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Cmd = &H1D: Ack = MPL_BWDriveCommand(hDev, Cmd, MplResult)  '/* ORIGIN COMMAND */
-'/* ƒT[ƒ{ƒ‚[ƒ^‚ÌŒ´“_o‚µ */
+'/* ?T?[?{???[?^?ÌŒ??_?o?? */
 
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
-  Data = 4: Ack = MPL_BWDriveData1(hDev, Data, MplResult)   'outp(AX_DT1,0x04);    /* ORG-4@•û® */
+  Data = 4: Ack = MPL_BWDriveData1(hDev, Data, MplResult)   'outp(AX_DT1,0x04);    /* ORG-4?@?ç·–ï½® */
   Cmd = &H1E: Ack = MPL_BWDriveCommand(hDev, Cmd, MplResult)  'outp(AX_COM,0x1e);    /* ORIGIN COMMAND */
 
 End Sub
@@ -349,7 +349,7 @@ End Sub
 Public Sub C870CntInit()
 Dim Data%
   If BrdFlg <> "ON" Then Exit Sub
-'/* ƒJƒEƒ“ƒ^ƒ{[ƒh‚Ì‰Šúİ’è */
+'/* ?J?E???^?{?[?h?Ì??ï¨ï¾?ãƒ»*/
   Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Data = 0: Ack = MPL_BWDriveData1(hDev, Data, MplResult)    '
   Data = &H65: Ack = MPL_BWDriveData2(hDev, Data, MplResult)  '2005.11.23
@@ -359,7 +359,7 @@ Dim Data%
 End Sub
 Public Sub C870SlowStop()
 Dim Data%
-'/* ’â~ */
+'/* ?ç«¡~ */
 '  Ready_Wait    'while((inp(AX_STS)&1)!=0);
   Cmd = &HFE: Ack = MPL_BWDriveCommand(hDev, Cmd, MplResult)   '
 End Sub

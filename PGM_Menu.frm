@@ -402,7 +402,7 @@ Begin VB.Form PGM_Menu
    End
    Begin VB.Label Label1 
       BackColor       =   &H00E0E0E0&
-      Caption         =   "NQD-71_Ver180217b"
+      Caption         =   "NQD-71_Ver180901"
       BeginProperty Font 
          Name            =   "ＭＳ Ｐゴシック"
          Size            =   12
@@ -1030,7 +1030,8 @@ Attribute VB_Exposed = False
 '　　　 Ver.NQD_71_140117  2014. 1.17.s.f.  TBK&TE統合版, Bug 修正　　全部で９カ所
 '　　　 Ver.NQD_71_140117  2014.10.09.s.f.  1Ton越　ノイズ対策　１０回ｘ１０回
 '　　　 Ver.NQD_71_180216  2018. 2.16.s.f.  130426,140117,141009　& DataSave機能追加　最終統合版　これ一つでOK
-'　　　 Ver.NQD_71_180217b  2018. 2.17.s.f. 表示部　見栄え変更
+'　　　 Ver.NQD_71_180217b 2018. 2.17.s.f. 　表示部　見栄え変更
+'　　　 Ver.NQD_71_180901  2018. 9. 1.s.f. 　130426SP7も繰り入れ
 '
 '///////////////////////////////////////////////////////
 '　　　TBK&TE　統合　　　Keyword=TBK/TE　　　 9箇所  Menu,KTD, My_lib, FbiDio, MplBDef,

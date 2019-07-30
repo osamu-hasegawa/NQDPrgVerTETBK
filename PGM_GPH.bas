@@ -1,6 +1,6 @@
 Attribute VB_Name = "PGM_GPH"
 Option Explicit
-Global gGphDtMax%         'ƒf[ƒ^” Œ³‚Íiaf
+Global gGphDtMax%         '?f?[?^?? ???ï¾iaf
 
 Public Sub MyEditGph(obj As Object)
 Dim i%, j%, itp%, icp%, ijp%, ja%, iaf%
@@ -20,12 +20,12 @@ Dim cor0!, cor1!, cor2!, cor3!, cor4!, cor5!
   cor3 = QBColor(3)
   cor4 = vbGreen    'QBColor(4)     '04.10.30
   cor5 = QBColor(5)
-  iaf = gGphDtMax                       'ƒf[ƒ^” Œ³‚Íiaf
+  iaf = gGphDtMax                       '?f?[?^?? ???ï¾iaf
   yPZero = 0: yTZero = 10: yZZero = 20
  
-  obj.Scale (30, 70)-(330, 380)      ' ‰æ–Ê‚Ì‘å‚«‚³(X0,Y0)-(X1,Y1)
+  obj.Scale (30, 70)-(330, 380)      ' ?è­ï¾Š?Ì‘å‚«??(X0,Y0)-(X1,Y1)
   obj.DrawWidth = 1
-'------------------------- –Ú·
+'------------------------- ?Ú?
   For j = 1 To iaf + 1
     x0 = 30 + 300 * j / (iaf + 2): y0 = 70
     x1 = 30 + 300 * j / (iaf + 2): y1 = 380
@@ -36,7 +36,7 @@ Dim cor0!, cor1!, cor2!, cor3!, cor4!, cor5!
   For j = iaf + 2 To 25   '  21 -> 25 2012.11.24
     MYEdit.Line1(j - 1).Visible = False
   Next j
-  ' ---------------------- §ŒäƒRƒ}ƒ“ƒh
+  ' ---------------------- ???è‰«R?}???h
   j = 0
   For i = 0 To 200
     Select Case Left(scom(i), 1)
@@ -125,10 +125,10 @@ Pend:
 End Sub
 
 Public Sub MoniGraph(obj As Object, ifst%, ifin%)
-'------------------------ ¬Œ`’†ƒ‚ƒjƒ^ƒOƒ‰ƒt‚Ì‰Šú‰»
+'------------------------ ???`?????j?^?O???t?Ì??åŒ€ï½»
 '
-'@@@@update 2002.8.20  uˆÊ’uv@‰©F‚É•ÏX
-'@@@@update 2004.10.30  u‰·“xv@—Î‚É•ÏX
+'?@?@?@?@update 2002.8.20  ?u?Ê’u?v?@???F?É•ÏX
+'?@?@?@?@update 2004.10.30  ?u???x?v?@?Î‚É•ÏX
 '
 Dim i%
 Dim x!, y!, xs!, ysZ!, ysT!, ysP!
@@ -143,77 +143,77 @@ Dim xVmax%, xVmin%, yVmax%, yVmin%
   cor0 = vbYellow
   cor1 = vbRed
   cor2 = vbGreen
-  cor3 = &HC0C0FF     'ƒsƒ“ƒN  vbBlack
-  cor4 = &HFFFFC0     '…F
+  cor3 = &HC0C0FF     '?s???N  vbBlack
+  cor4 = &HFFFFC0     '???F
   '
   If ifin = 0 Then obj.Cls
   '
   xVmin = 0: xVmax = 1000
   yVmin = 0: yVmax = 1000
-  obj.Scale (xVmin, yVmax)-(xVmax, yVmin)   ' ‰æ–Ê‚Ì‘å‚«‚³(X0,Y0)-(X1,Y1)
+  obj.Scale (xVmin, yVmax)-(xVmax, yVmin)   ' ?è­ï¾Š?Ì‘å‚«??(X0,Y0)-(X1,Y1)
   '
-  yZMin = InitDat(1)  'ƒOƒ‰ƒtƒXƒP[ƒ‹À•W (Min)
-  yZMax = InitDat(2)  'ƒOƒ‰ƒtƒXƒP[ƒ‹À•W (Max)
+  yZMin = InitDat(1)  '?O???t?X?P?[???W (Min)
+  yZMax = InitDat(2)  '?O???t?X?P?[???W (Max)
   ysZ = (yVmax - yVmin) / (yZMax - yZMin)
   '
-  yPMin = InitDat(3)  'ƒOƒ‰ƒtƒXƒP[ƒ‹Œ^’÷ˆ³ (Min)
-  yPMax = InitDat(4)  'ƒOƒ‰ƒtƒXƒP[ƒ‹Œ^’÷ˆ³ (Max)
+  yPMin = InitDat(3)  '?O???t?X?P?[???^?î•«ï½³ (Min)
+  yPMax = InitDat(4)  '?O???t?X?P?[???^?î•«ï½³ (Max)
   ysP = (yVmax - yVmin) / (yPMax - yPMin)
   '
-  yTMin = InitDat(5)  'ƒOƒ‰ƒtƒXƒP[ƒ‹Œ^‰·“x (Min)
-  yTMax = InitDat(6)  'ƒOƒ‰ƒtƒXƒP[ƒ‹Œ^‰·“x (Max)
+  yTMin = InitDat(5)  '?O???t?X?P?[???^???x (Min)
+  yTMax = InitDat(6)  '?O???t?X?P?[???^???x (Max)
   ysT = (yVmax - yVmin) / (yTMax - yTMin)
   '
-  xMin = InitDat(7) * 60 'ƒOƒ‰ƒtƒXƒP[ƒ‹Œo‰ßŠÔ (Min)
-  xMax = InitDat(8) * 60 'ƒOƒ‰ƒtƒXƒP[ƒ‹Œo‰ßŠÔ (Max)
+  xMin = InitDat(7) * 60 '?O???t?X?P?[???o?ß??ï¾” (Min)
+  xMax = InitDat(8) * 60 '?O???t?X?P?[???o?ß??ï¾” (Max)
   xs = (yVmax - yVmin) / (xMax - xMin)
   '
-  '---------------- À•W
+  '---------------- ?W
   i = ifst
-  x0 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
-  y0 = (ZAxis(i) - yZMin) * ysZ + yZMin     'À•WiZ-²j
+  x0 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
+  y0 = (ZAxis(i) - yZMin) * ysZ + yZMin     '?W?iZ-???j
   For i = ifst + 1 To ifin
-    x1 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
-    y1 = (ZAxis(i) - yZMin) * ysZ + yZMin     'À•WiZ-²j
+    x1 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
+    y1 = (ZAxis(i) - yZMin) * ysZ + yZMin     '?W?iZ-???j
     obj.Line (x0, y0)-(x1, y1), cor0
     x0 = x1: y0 = y1
   Next i
-  '---------------- Œ^’÷ˆ³
+  '---------------- ?^?î•«ï½³
   i = ifst
-  x0 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+  x0 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
   y0 = (Press(i) - yPMin) * ysP + yPMin     '
   For i = ifst + 1 To ifin
-    x1 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+    x1 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
     y1 = (Press(i) - yPMin) * ysP + yPMin     '
     obj.Line (x0, y0)-(x1, y1), cor1
     x0 = x1: y0 = y1
   Next i
-  '---------------- Œ^‰·“xi‰·’²Œvj
+  '---------------- ?^???x?i?????v?j
   i = ifst
-  x0 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+  x0 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
   y0 = (Templ(i) - yTMin) * ysT + yTMin     '
   For i = ifst + 1 To ifin
-    x1 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+    x1 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
     y1 = (Templ(i) - yTMin) * ysT + yTMin     '
     obj.Line (x0, y0)-(x1, y1), cor2
     x0 = x1: y0 = y1
   Next i
-  '---------------- Œ^‰·“xiãŒ^j
+  '---------------- ?^???x?i?ç¹»^?j
   i = ifst
-  x0 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+  x0 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
   y0 = (Templu(i) - yTMin) * ysT + yTMin     '
   For i = ifst + 1 To ifin
-    x1 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+    x1 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
     y1 = (Templu(i) - yTMin) * ysT + yTMin     '
     obj.Line (x0, y0)-(x1, y1), cor3
     x0 = x1: y0 = y1
   Next i
-  '---------------- Œ^‰·“xi‰ºŒ^j
+  '---------------- ?^???x?i???^?j
   i = ifst
-  x0 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+  x0 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
   y0 = (Templd(i) - yTMin) * ysT + yTMin     '
   For i = ifst + 1 To ifin
-    x1 = (TPass(i) - xMin) * xs + xMin        'Œo‰ßŠÔ(•b)
+    x1 = (TPass(i) - xMin) * xs + xMin        '?o?ß??ï¾”(?b)
     y1 = (Templd(i) - yTMin) * ysT + yTMin     '
     obj.Line (x0, y0)-(x1, y1), cor4
     x0 = x1: y0 = y1

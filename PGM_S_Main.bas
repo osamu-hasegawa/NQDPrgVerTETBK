@@ -1,37 +1,37 @@
 Attribute VB_Name = "PGM_S_Main"
-Global VccDt!(0 To 10)        '^‹óŒv‚Ìƒf[ƒ^
-Global VccCnt%                '^‹óŒv‚Ìƒf[ƒ^”z—ñ‚ÌƒJƒEƒ“ƒ^
+Global VccDt!(0 To 10)        '?^?î‰¿v?Ìƒf?[?^
+Global VccCnt%                '?^?î‰¿v?Ìƒf?[?^?z?îƒ½ï¾Œ?J?E???^
 Global VccTm0!
 Global VccTm1!
 
 Public Sub hijyou()
-'/* ”ñí’â~‚ğƒV[ƒPƒ“ƒT‚É‚©‚¯‚é */
-'outp(DIO_P,0x10);   /* ”ñí’â~‚ğƒV[ƒPƒ“ƒT‚ÖˆË—Š */
+'/* ?î„Šãƒ»ç«¡~?î‚V?[?P???T?É‚????ãƒ»*/
+'outp(DIO_P,0x10);   /* ?î„Šãƒ»ç«¡~?î‚V?[?P???T?ÖˆË—? */
   EmgFlg = True
-  DioOut 5, 1     '”ñí’â~
-  SeikeiOFF       '¬Œ`OFF@‘Ò‹@’†
+  DioOut 5, 1     '?î„Šãƒ»ç«¡~
+  SeikeiOFF       '???`OFF?@?Ò‹@??
   ServoOFF
   OrgOFF
-'  VacuumOFF      '2006.12.21 íœ s.f
+'  VacuumOFF      '2006.12.21 ?íœ s.f
   HeatOFF
   CoolOFF
   FrmEmg.Show 1
 End Sub
 
 'Public Sub cal_pid(m_sa!, m_p!, m_lim!)
-''  float  m_sa,     /* İ’èˆ³—Í */
-''         m_p,      /* İ’è‚o’l */
-''         m_lim;    /* İ’èƒŠƒ~ƒbƒg’l */
+''  float  m_sa,     /* ?İ’èˆ³?ï¾ */
+''         m_p,      /* ?İ’é–§o?l */
+''         m_lim;    /* ?İ’èƒŠ?~?b?g?l */
 'Dim i%, nout%
 'Dim pa!, per!
-'  pa = r_pres()     '/* ˆ³—Í */
+'  pa = r_pres()     '/* ???ï¾ */
 '
-'  If pa > 1000 Then '/* w’èˆ³—Í{‚Q‚O‚O‚j‚‡ˆÈã‚Å”ñí’â~ */
+'  If pa > 1000 Then '/* ?w?èˆ³?Í{?Q?O?O?j???Èç¹§ï¾…?î„Šãƒ»ç«¡~ */
 '    hijyou
 '    Exit Sub
 '  End If
 '
-''/* ‚o‚h‚c‰‰Z */
+''/* ?o?h?c???Z */
 '
 '  per = 5 * (m_sa - pa) * Abs(m_sa - pa) / (m_p * m_p)
 '  If per > m_lim Then per = m_lim
@@ -47,10 +47,10 @@ Public Sub err_sign(ic%, id%)
 Dim i%, ih%
 '
 ' ic
-' B0-B3 : ‹z’…ƒGƒ‰[ ` ƒT[ƒ{ƒGƒ‰[
-' B4    : ‹z’…ƒGƒ‰[ã‰ºØŠ·
+' B0-B3 : ?z???G???[ ?` ?T?[?{?G???[
+' B4    : ?z???G???[?ã‰º?ØŠ?
 ' id
-' ƒGƒ‰[ ‚P`‚P‚Q
+' ?G???[ ?P?`?P?Q
   Err_ic = ic: Err_id = id
   'frmerr_sign.Show
   'Call frmerr_sign.DispErr
@@ -142,12 +142,12 @@ End Sub
 '  VccTm1 = VccTm0
 '  flg = 0
 '  'AdRead dt(), flg
-'  '------ ƒV[ƒPƒ“ƒT‚Å^‹óŒv‚Ì“dŒ¹‚Æ‚`‚m‚c(2002.6.11)
+'  '------ ?V?[?P???T?Å^?î‰¿v?Ì“d???Æ‚`?m?c(2002.6.11)
 '  'If dt(4) < VccHi Or gVumFlg = 1 Then
-'  '  gVumFlg = 0                       '^‹ó“’B=1
-'    VacuumON                           '^‹ó“’BM†”­M
+'  '  gVumFlg = 0                       '?^?ó“’B=1
+'    VacuumON                           '?^?ó“’B?M?????M
 '  'Else
-'    VacuumOFF                           '^‹ó–¢“’BM†”­M
+'    VacuumOFF                           '?^?ó–¢“??B?M?????M
 '  'End If
 '  Exit Sub
 '  '
@@ -157,17 +157,17 @@ End Sub
 '  If VccCnt < 0 Then VccCnt = 0
 '  If VccCnt > 3 Then VccCnt = 0
 '  VccDt(VccCnt) = dt(4)
-'  '---- ^‹óŒv@‚kƒŒƒ“ƒW@‚P@`@‚R
-'  '  ^‹óZERO@@@@@@@@@^‹ó“’B“_
+'  '---- ?^?î‰¿v?@?k?????W?@?P?@?`?@?R
+'  '  ?^?î‰ERO?@?@?@?@?@?@?@?@?@?^?ó“’B?_
 '  For i = 1 To 3
 '    If VccLw < VccDt(i) And VccDt(i) < VccHi Then flg = flg + 1
 '  Next i
 '  If flg = 3 Or gVumFlg = 1 Then
-'    gVumFlg = 0                       '^‹ó“’B=1
-'    VacuumON                 '    '2006.12.21 íœ s.f
+'    gVumFlg = 0                       '?^?ó“’B=1
+'    VacuumON                 '    '2006.12.21 ?íœ s.f
 '    For i = 0 To 4: VccDt(i) = 10: Next i
 '    WaitSec 1
-'    VacuumOFF          '    '2006.12.21 íœ s.f
+'    VacuumOFF          '    '2006.12.21 ?íœ s.f
 '  Else
 '    VacuumOFF
 '  End If
@@ -177,12 +177,12 @@ End Sub
 Public Function DispCtrlCommand$(i%)
 Dim sdt$
     sdt = Right("     " & Format(i, "0"), 4)
-    sdt = sdt & "  " & Right("     " & Format(seg_num(i), "0"), 4)   ' /* ƒZƒOƒƒ“ƒg”Ô† */
-    sdt = sdt & "  " & Right("     " & Format(ic(i), "0"), 4)        ' /* §Œä•û® 1,2,3,8,9 */
-    sdt = sdt & "  " & Right("         " & Format(z(i), "0.000"), 7) ' /* –Ú•WˆÊ’u */
-    sdt = sdt & "  " & Right("         " & Format(vel(i), "0.0"), 7) ' /* ‘¬“x */
-    sdt = sdt & "  " & Right("       " & Format(pres(i), "0"), 6)    ' /* ƒvƒŒƒXˆ³—Í */
-    sdt = sdt & "  " & Right("     " & Format(t0(i), "0.0"), 4)      ' /* ƒ^ƒCƒ€ƒAƒEƒg’l */
-    sdt = sdt & "  " & Right("     " & Format(p(i), "0.0"), 4)       ' /* ‚o‚h‚c@‚o */
+    sdt = sdt & "  " & Right("     " & Format(seg_num(i), "0"), 4)   ' /* ?Z?O?????g?Ô? */
+    sdt = sdt & "  " & Right("     " & Format(ic(i), "0"), 4)        ' /* ???è‹ºãƒ»? 1,2,3,8,9 */
+    sdt = sdt & "  " & Right("         " & Format(z(i), "0.000"), 7) ' /* ?Ú•W?Ê’u */
+    sdt = sdt & "  " & Right("         " & Format(vel(i), "0.0"), 7) ' /* ???x */
+    sdt = sdt & "  " & Right("       " & Format(pres(i), "0"), 6)    ' /* ?v???X???ï¾ */
+    sdt = sdt & "  " & Right("     " & Format(t0(i), "0.0"), 4)      ' /* ?^?C???A?E?g?l */
+    sdt = sdt & "  " & Right("     " & Format(p(i), "0.0"), 4)       ' /* ?o?h?c?@?o */
   DispCtrlCommand = sdt
 End Function

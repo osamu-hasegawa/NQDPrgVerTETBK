@@ -5,102 +5,102 @@ Attribute VB_Name = "PGM_KTD"
 '
 '         update: 2002.6.29  s.f   difftime
 '         update: 2002.10.5  s.f   difftime!
-'         update: 2002.12.03 s.f   RecDtsave0, RecDtsave ’Ç‰Á
-'         update: 2002.12.07 s.f   RecDtsave0(icnt) ‚Ö•ÏX
-'         update: 2002.12.09 s.f   cooloff, heatoff ‰ŠúƒŠƒZƒbƒg@’Ç‰Á
-'         update: 2004. 3. 8 s.f   RecEmgDtsave ”ñí’â~ƒƒbƒZ[ƒW‚Ì•Û‘¶  2004.3.8'
-'         update: 2004. 3.12 s.f   ‘¬“xw—ß“dˆ³@Global éŒ¾
-'         update: 2004. 3.30 s.f   ”ñí’â~Ò¯¾°¼ŞƒoƒOC³
-'         update: 2004. 5. 5 s.f   ‰·“xŒW”A“÷Œú•â³ƒ‹[ƒ`ƒ“@’Ç‰Á  PGM_KTD,My_lib,MYEDIT, LS21_SC, LS21_TC
-'         update: 2005. 9.27 s.f   •Û‰·’â~ƒ‚[ƒh@’Ç‰Á
-'         update: 2005. 9.28 s.f   TŒW”@•\¦F•ÏX
-'         update: 2005.11. 6 s.f   ƒI[ƒo[ƒtƒ[‘Îô idc65536,idc256,ddc05
+'         update: 2002.12.03 s.f   RecDtsave0, RecDtsave ?Ç‰ï¾
+'         update: 2002.12.07 s.f   RecDtsave0(icnt) ?Ö•ÏX
+'         update: 2002.12.09 s.f   cooloff, heatoff ???å‡¬æ½ŸZ?b?g?@?Ç‰ï¾
+'         update: 2004. 3. 8 s.f   RecEmgDtsave ?î„Šãƒ»ç«¡~???b?Z?[?W?Ì•Û‘?  2004.3.8'
+'         update: 2004. 3.12 s.f   ???x?w?ß“d???@Global ?éŒ¾
+'         update: 2004. 3.30 s.f   ?î„Šãƒ»ç«¡~Ò¯???Şƒo?O?C??
+'         update: 2004. 5. 5 s.f   ???x?W???A?î•¯ãƒ»â³???[?`???@?Ç‰ï¾  PGM_KTD,My_lib,MYEDIT, LS21_SC, LS21_TC
+'         update: 2005. 9.27 s.f   ?Û‰??ç«¡~???[?h?@?Ç‰ï¾
+'         update: 2005. 9.28 s.f   T?W???@?\???F?ÏX
+'         update: 2005.11. 6 s.f   ?I?[?o?[?t???[?Îãƒ»idc65536,idc256,ddc05
 '         update: 2006.04.14 s.f   on error goto
-'         update: 2006.04.15 s.f   error •\¦
-'         update: 2006.05.15 s.f   data‘‚«‚İA“Ç‚İ‚İ@hL"@’Ç‰Á
-'       Ver.3.33R_070927 2007.09.27 s.f  Z•â³@w’è‚µ‚½¾¸ŞÒİÄNo.‚Ö@‚Å‚«‚é‚æ‚¤‚É‚·‚é
-'       Ver.3.33R_071113 2007.11.13 s.f  u‹­§ƒ\[ƒNv•œŠˆA@u1‰ñ¬Œ`venable=False‚Ö
-'       Ver.3.33R_071119 2007.11.19 s.f  ‰Áˆ³ŠÔ§Œä@ƒoƒOC³ieditAƒf[ƒ^Œp³jA•½‹Ï’lANDÅV’l‚Å@XV”»’è‚Ö
-'@@@@@@@@@@@@@@@@@@@@‰Áˆ³ŠÔ§Œä@ON‚ÍA@TŒW”ƒf[ƒ^‚Ì@ƒtƒ@ƒCƒ‹‚©‚ç‚Ì“Ç‚İ‚İ‚µ‚È‚¢
-'       Ver.3.33R_071120 2007.11.20 s.f  ƒoƒOC³A@‹ó¬Œ`-”ro@’Ç‰ÁA@˜A‘±¬Œ`ÄŠJ@’Ç‰Á
-'       Ver.3.33R_071203 2007.12.03 s.f  ”ñí’â~@ƒƒbƒZ[ƒW’Ç‰ÁA•ÏX
+'         update: 2006.04.15 s.f   error ?\??
+'         update: 2006.05.15 s.f   data???????İA?Ç‚İ??İ??@?hL"?@?Ç‰ï¾
+'       Ver.3.33R_070927 2007.09.27 s.f  Z?â³?@?w?è‚µ????ï¾ï¾’ï¾ï¾„No.?Ö@?Å‚??é©ãƒ»??É‚??ãƒ»
+'       Ver.3.33R_071113 2007.11.13 s.f  ?u?????\?[?N?v?????A?@?u1?ñ¬Œ`?venable=False?ï¾–
+'       Ver.3.33R_071119 2007.11.19 s.f  ?H????Ô??è‰¨@?o?O?C???iedit???A?f?[?^?p???j?A???Ï’lAND?ÅV?l?Å@?X?V???é–§ï¾–
+'?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?H????Ô??è‰¨@ON???ÍA?@T?W???f?[?^?Ì@?t?@?C?????è½¤ï¾Œ?Ç‚İ??İ‚??È‚?
+'       Ver.3.33R_071120 2007.11.20 s.f  ?o?O?C???A?@?ó¬Œ`-?r?o?@?Ç‰AA?@?A?????`?ÄŠJ?@?Ç‰ï¾
+'       Ver.3.33R_071203 2007.12.03 s.f  ?î„Šãƒ»ç«¡~?@???b?Z?[?W?Ç‰AA?ÏX
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'       Ver.NQD_70_080320 2008. 03.20 s.f  C870v1Œü‚¯@ReadyWait‚ğ@‚·‚×‚Ä‚É“ü‚ê‚é
-'       Ver.NQD_71_080910 2008. 9.10 s.f  VQD@‚Q†‹@—§ã‚É”º‚¤@ƒ‚[ƒ^[ƒpƒ‹ƒXA‰ñ“]•ûŒüŒ©’¼‚µ
-'       Ver.NQD_71_090817 s.f  NQD6—§ã‚É”º‚¤Œ©’¼‚µ
-'       Ver.NQD_71_140111 s.f  TBK&TE“‡
+'       Ver.NQD_70_080320 2008. 03.20 s.f  C870v1?ãƒ»ï½¯ã€€ReadyWait?î€@???×‚Ä‚É“ãƒ»ãƒ»ãƒ»
+'       Ver.NQD_71_080910 2008. 9.10 s.f  ?VQD?@?Q???@???ç¹§ï¾‰?????@???[?^?[?p???X?A?î„]?ç¶·ãƒ»?????
+'       Ver.NQD_71_090817 s.f  NQD6???ç¹§ï¾‰??????????
+'       Ver.NQD_71_140111 s.f  TBK&TE????
 '///////////////////////////////////////////////////////
-'@@@TBK&TE@“‡@@@Keyword=TBK/TE@@@1‰ÓŠ
+'?@?@?@TBK&TE?@?????@?@?@Keyword=TBK/TE?@?@?@1?Ó?
 '///////////////////////////////////////////////////////
 '
 Option Explicit
 '
-Global iFlg_hijyou%                    ' ”ñí’â~FLG@'090817@NQD70_SC‚©‚çˆÚĞ
-'                                        0: ³í 1:À²Ñ±¯Ìß    2:²§Œä7     3:4:5:DCƒGƒ‰[
-'                                        6: r_pres@1ton‰z‚¦  7:    8:     9:
-'                                       10:@¼°¹İ»°
+Global iFlg_hijyou%                    ' ?î„Šãƒ»ç«¡~FLG?@'090817?@NQD70_SC???è¾·ï¾š?ï¾
+'                                        0: ???ãƒ»1:2Ñ±?ï¾Œï¾Ÿ    2:?????ãƒ»     3:4:5:DC?G???[
+'                                        6: r_pres?@1ton?z??  7:    8:     9:
+'                                       10:?@???İ»?
 '
-Global InitDat!(0 To 50)               '•Û‘¶ƒf[ƒ^
+Global InitDat!(0 To 50)               '?Û‘??f?[?^
 Global InitStr$(0 To 50)
 '
-Global TPass!(0 To 12000)                'Œo‰ßŠÔ(•b)
-Global ZAxis!(0 To 12000)                'À•WiZ-²j
-Global Press!(0 To 12000)                'Œ^’÷ˆ³
-Global Templ!(0 To 12000)                'Œ^‰·“x
-Global Templu!(0 To 12000)               'Œ^‰·“x ã
-Global Templd!(0 To 12000)               'Œ^‰·“x ‰º
+Global TPass!(0 To 12000)                '?o?ß??ï¾”(?b)
+Global ZAxis!(0 To 12000)                '?W?iZ-???j
+Global Press!(0 To 12000)                '?^?î•«ï½³
+Global Templ!(0 To 12000)                '?^???x
+Global Templu!(0 To 12000)               '?^???x ?ãƒ»
+Global Templd!(0 To 12000)               '?^???x ??
 Global Const ResDtSize = 12000
 Global BrdFlg$
-Global StartTime!                       'Debug—p
-Global GCnt0%                           '¬Œ`’†ƒf[ƒ^ƒJƒEƒ“ƒ^
+Global StartTime!                       'Debug?p
+Global GCnt0%                           '???`???f?[?^?J?E???^
 Global GCnt1%
-Global Const H24Hr = 24# * 3600!        'Timer—p ˆê“ú‚Ì•b”
-Global EmgFlg%                          '”ñí’â~
-Global gOrgFlg%                         'Œ´“_•œ‹AŠ®—¹=TRUE
+Global Const H24Hr = 24# * 3600!        'Timer?p ?é½ ãƒ»Ì•b??
+Global EmgFlg%                          '?î„Šãƒ»ç«¡~
+Global gOrgFlg%                         '???_???A????=TRUE
 '
 Global Err_ic%, Err_id%                 'ERROR
-Global pv_ch!        '/* ƒ}ƒjƒ…ƒAƒ‹‚Ì‘¬“x^ˆÊ’uØ‚èŠ·‚¦’l*/
-Global VccLw!                           '^‹óZero
-Global VccHi!                           '^‹ó“’B“_
+Global pv_ch!        '/* ?}?j???A?????Ì‘??x?^?Ê’u?Ø‚èŠ·???l*/
+Global VccLw!                           '?^?î‰ero
+Global VccHi!                           '?^?ó“’B?_
 '
-Global FrmMenuFlg%                      'ƒƒjƒ…[‚©‚ç”²‚¯‚é‚Æ‚«false
-Global gM_sa!                           'ƒƒjƒ…[‚Ì‘¬“x§Œä‚Ì‚Ì/* İ’èˆ³—Í */
-Global gM_p!                           'ƒƒjƒ…[‚Ì‘¬“x§Œä‚Ì‚Ì/* İ’è‚o’l */
-Global gM_lim!                           'ƒƒjƒ…[‚Ì‘¬“x§Œä‚Ì‚Ì/* İ’èƒŠƒ~ƒbƒg’l */
-Global ViewFlg%                         '‰æ–Ê”Ô†
+Global FrmMenuFlg%                      '???j???[???ç”²???é©ï¾†??false
+Global gM_sa!                           '???j???[?Ì‘??x???è‰ªï¾Œ???ï¾Œ/* ?İ’èˆ³?ï¾ */
+Global gM_p!                           '???j???[?Ì‘??x???è‰ªï¾Œ???ï¾Œ/* ?İ’é–§o?l */
+Global gM_lim!                           '???j???[?Ì‘??x???è‰ªï¾Œ???ï¾Œ/* ?İ’èƒŠ?~?b?g?l */
+Global ViewFlg%                         '?è­ï¾Š?Ô?
 '/////////////////////////////////////
 '      TBK/TE
 ' /TBK/'  ////////
-'Global Const gDirect! = -1            'S.M‚Ì‰ñ“]•ûŒü (+1 or -1)'08.3.24 tsubaki
-'Global Const gRev2Disp As Double = 8000  '1‰ñ“]‚ ‚½‚è‚Ìƒpƒ‹ƒX” KD2002ED(ÂÊŞ·)ƒ‚[ƒ^[  2000*4=8000
+'Global Const gDirect! = -1            'S.M?Ì‰î„]?ç¶·ãƒ»(+1 or -1)'08.3.24 tsubaki
+'Global Const gRev2Disp As Double = 8000  '1?î„]?????é–§ï¾Œ?p???X?? KD2002ED(ï¾‚ï¾ŠŞ·)???[?^?[  2000*4=8000
 ' /TE/'  //////////
-Global Const gDirect! = 1            'S.M‚Ì‰ñ“]•ûŒü (+1 or -1)  '08.09.10“Œ‰h
-Global Const gRev2Disp As Double = 24000   '1‰ñ“]‚ ‚½‚è‚Ìƒpƒ‹ƒX” “Œ‰hƒT[ƒ{ƒ‚[ƒ^[@ƒŒƒ]ƒ‹ƒo 24000Pulse/rev.  Ì‚ÌLS‹@
+Global Const gDirect! = 1            'S.M?Ì‰î„]?ç¶·ãƒ»(+1 or -1)  '08.09.10???h
+Global Const gRev2Disp As Double = 24000   '1?î„]?????é–§ï¾Œ?p???X?? ???h?T?[?{???[?^?[?@???]???o 24000Pulse/rev.  ?Ì‚ï¾ŒLS?@
 '//////////////////////////////////////////////////////////////////
-Global gTimeUpCnt%                      'ƒ^ƒCƒ€ƒAƒbƒv‚ÌƒJƒEƒ“ƒ^
-Global gVumFlg%                         '^‹ó“’B=1
-Global Const idc16777216 As Long = 16777216  '@ƒI[ƒo[ƒtƒ[‘Îô‚Å’Ç‰Á  2005.11.22
-Global Const idc8388607 As Long = 8388607  '@ƒI[ƒo[ƒtƒ[‘Îô‚Å’Ç‰Á  2005.11.22
-Global Const idc65536  As Long = 65536  '@ƒI[ƒo[ƒtƒ[‘Îô‚Å’Ç‰Á@‚±‚Ì‰º‚Rs@2005.11.6@‚“D‚†
+Global gTimeUpCnt%                      '?^?C???A?b?v?ÌƒJ?E???^
+Global gVumFlg%                         '?^?ó“’B=1
+Global Const idc16777216 As Long = 16777216  '?@?I?[?o?[?t???[?ÎîŒ±ï¾…?Ç‰ï¾  2005.11.22
+Global Const idc8388607 As Long = 8388607  '?@?I?[?o?[?t???[?ÎîŒ±ï¾…?Ç‰ï¾  2005.11.22
+Global Const idc65536  As Long = 65536  '?@?I?[?o?[?t???[?ÎîŒ±ï¾…?Ç‰A@???Ì‰??R?s?@2005.11.6?@???D??
 Global Const idc256 As Long = 256
 Global Const ddc05 As Double = 0.5
 Global Const dc0 As Double = 0#
-Global Const LongTime As Long = 80000     '80000•bi1“ú=86400•bj‚ğ@ˆÙí‚É’·‚¢ŠÔ‚Æ‚·‚éB@100116
-Global sdt1$, sdt2$, sdt3$             'ƒGƒ‰[•\¦—p  2006.4.14
-' -----------------  2005.5.’Ç‰Á
-Global versionNo$, ppos$      '@version@No.@PGM_Menu‚Ì@Label1(13), PresentPosition(Œ»İˆÊ’uj
-Global CmndColoff!(0 To 9)  'ƒRƒ}ƒ“ƒh–t‚ÌF off•’i‚ÌF
-Global CmndColon!(0 To 9)  'ƒRƒ}ƒ“ƒh–t‚ÌF@on@‰Ÿ‚³‚ê‚½‚Æ‚«‚ÌF
-Global T_keisuCol!(0 To 4)  '‰·“xŒW”A“÷Œú•â³•\¦‚ÌbackColor
-Global kkno%               ' ‰Áˆ³ŠÔ§Œä@Œ^No
-'--------------- ƒŒƒ“ƒY¬Œ`‹@ƒvƒƒOƒ‰ƒ€
-' 2001”N3Œ
+Global Const LongTime As Long = 80000     '80000?b?i1?ãƒ»86400?b?j?î€@?Ùå¢²ï¾‰???????Ô‚Æ‚??é©•B?@100116
+Global sdt1$, sdt2$, sdt3$             '?G???[?\???p  2006.4.14
+' -----------------  2005.5.?Ç‰ï¾
+Global versionNo$, ppos$      '?@version?@No.?@PGM_Menu?Ì@Label1(13), PresentPosition(???İˆÊ’u?j
+Global CmndColoff!(0 To 9)  '?R?}???h?t?ÌF off???i?ÌF
+Global CmndColon!(0 To 9)  '?R?}???h?t?ÌF?@on?@?????ê‚½?Æ‚??ÌF
+Global T_keisuCol!(0 To 4)  '???x?W???A?î•¯ãƒ»â³?\???ï¾ŒbackColor
+Global kkno%               ' ?H????Ô??è‰¨@?^No
+'--------------- ?????Y???`?@?v???O????
+' 2001?N3??
 '
-Global gcoxFlName$       'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-Global gcoxFldir$        'ƒfƒBƒŒƒNƒgƒŠ
+Global gcoxFlName$       '?R???g???[???f?[?^?t?@?C????
+Global gcoxFldir$        '?f?B???N?g??
 '
 Global gCoxFlDtMax%
-Global gCoxDlDt(0 To 200) As String       'coxƒtƒ@ƒCƒ‹‚Ì“Ç‚ñ‚¾‚Ü‚Ü‚Ìƒf[ƒ^
+Global gCoxDlDt(0 To 200) As String       'cox?t?@?C???Ì“Ç‚ñ‚¾‚Ü‚Ü‚Ìƒf?[?^
 Global scom(0 To 200) As String       '
 Global sisub(0 To 200) As Long        '
 Global sjsub(0 To 200) As Long        '
@@ -108,104 +108,104 @@ Global sksub(0 To 200) As Long        '
 Global slsub(0 To 200) As Long        '
 Global hcomm(0 To 3) As String        '
 Global dcomm(0 To 200) As String      '
-Global seg_num(0 To 100) As Integer   'ƒZƒOƒƒ“ƒg”Ô†
-Global ic(0 To 100) As Integer        '§Œä•û®
-Global pres(0 To 100) As Single      'ƒvƒŒƒXˆ³—Í
-Global z(0 To 100) As Single          '–Ú•WˆÊ’u
-Global vel(0 To 100) As Single        '‘¬“x
+Global seg_num(0 To 100) As Integer   '?Z?O?????g?Ô?
+Global ic(0 To 100) As Integer        '???è‹ºãƒ»?
+Global pres(0 To 100) As Single      '?v???X???ï¾
+Global z(0 To 100) As Single          '?Ú•W?Ê’u
+Global vel(0 To 100) As Single        '???x
 Global t0(0 To 100) As Single         'Time Out
 Global p(0 To 100) As Single          'PID P
-Global ptime%                         '‘ª’èŠÔ •ª
-Global ytemp%                         '—\”õ‰Á”M “x
+Global ptime%                         '???è?ï¾” ??
+Global ytemp%                         '?\?î´ï¾?M ?x
 '
-' ----------   ‰·“xŒW”A“÷Œú•â³ƒf[ƒ^     2004.4.30
+' ----------   ???x?W???A?î•¯ãƒ»â³?f?[?^     2004.4.30
 
-Global ishu%                      ' ¬Œ`@Hü–Ú
-Global ishu_bkup%                 ' ¬Œ`@Hü–Ú‚Ìbackup
-Global T_keisuCont%(0 To 3)        '‰·“xŒW”ƒRƒ“ƒgƒ[ƒ‹
-Global T_keisu!(0 To 9)          '‰·“xŒW”ƒf[ƒ^
+Global ishu%                      ' ???`?@?H?ãƒ»ï¾š
+Global ishu_bkup%                 ' ???`?@?H?ãƒ»ï¾š?ï¾Œbackup
+Global T_keisuCont%(0 To 3)        '???x?W???R???g???[??
+Global T_keisu!(0 To 9)          '???x?W???f?[?^
 Global T_keisu_dum!
-Global Z3_HoseiCont%(0 To 2)          '‰·“xŒW”ƒRƒ“ƒgƒ[ƒ‹
-Global Z3_Hosei!(0 To 9)          '‰·“xŒW”ƒf[ƒ^
-Global DkatJ!(0 To 1)           '‰Áˆ³ŠÔ–Ú•W’l
-Global AkatJ!(0 To 1)           '‰Áˆ³ŠÔƒAƒ‰[ƒ€İ’è@ãŒÀ‰ºŒÀ
-Global Acp!(0 To 1)             'CpˆÊ’uƒAƒ‰[ƒ€İ’è@ãŒÀ‰ºŒÀ
-Global Almdisp$                     'ƒAƒ‰[ƒ€•\¦@‰Áˆ³ŠÔ‚‚’‚b‚ˆÊ’u
+Global Z3_HoseiCont%(0 To 2)          '???x?W???R???g???[??
+Global Z3_Hosei!(0 To 9)          '???x?W???f?[?^
+Global DkatJ!(0 To 1)           '?H????Ô–Ú•W?l
+Global AkatJ!(0 To 1)           '?H????ÔƒA???[???İ’é–¨@?ç¹»ï¾€???ï¾€
+Global Acp!(0 To 1)             'Cp?Ê’u?A???[???İ’é–¨@?ç¹»ï¾€???ï¾€
+Global Almdisp$                     '?A???[???\???@?H????Ô‚????b???Ê’u
 Global AlmON%                   ' alarm On/Off flg
-Global iSeikeiTorF_flg%         ' ¬Œ`@—LŒø‚‚’–³Œø‚e‚k‚f
-Global katCflag%                '‰Áˆ³ŠÔ ©“®§Œäƒtƒ‰ƒO
-Global katDflag%                '‰Áˆ³ŠÔ@§Œä@•ÏXƒ_ƒ‚e‚k‚f
-Global Henkou_No%               '‰Áˆ³ŠÔ©“®§Œä—p Œ^•ÏX“à—e@•ÏX‚È‚µAŒ¸‚ç‚·A‘‚â‚·A“ü‚ê‘Ö‚¦
+Global iSeikeiTorF_flg%         ' ???`?@?L?ò‚’???î˜¡e?k?f
+Global katCflag%                '?H????ï¾” ???????è‰«t???O
+Global katDflag%                '?H????Ô@???è‰¨@?ÏX?_???e?k?f
+Global Henkou_No%               '?H????Ô??????èŒƒp ?^?ÏX?ç‡‰e?@?ÏX?È‚??A???ç‚·?A???â‚·?A?ãƒ»ãƒ»Ö‚?
 Global kaatsuJ!(0 To 10, 0 To 5)
-Global iflgKataTorF%(0 To 9)     ' Œ^ƒtƒ‰ƒO@true=–{•¨@@False=dammy
-Global iPltMax%                  '1‰ñ¬Œ`‚ÌŒ^iƒpƒŒƒbƒgj”
-Global Saikaiflg As Boolean     ' ÄŠJƒtƒ‰ƒO2007.11.19 tsuika
-Global lSokuFlg%                  '‹­§ƒ\[ƒNƒ^ƒCƒ€
-Global Karauchiflg As Boolean   ' ‹ó¬Œ`|”ro@ƒtƒ‰ƒO
+Global iflgKataTorF%(0 To 9)     ' ?^?t???O?@true=?{???@?@False=dammy
+Global iPltMax%                  '1?ñ¬Œ`???ÌŒ^?i?p???b?g?j??
+Global Saikaiflg As Boolean     ' ?ÄŠJ?t???O2007.11.19 tsuika
+Global lSokuFlg%                  '?????\?[?N?^?C??
+Global Karauchiflg As Boolean   ' ?ó¬Œ`?|?r?o?@?t???O
 '
-Global gDate$                         'Œ‹‰ÊƒOƒ‰ƒt“ú•t‚¯
-Global gTime$                         'Œ‹‰ÊƒOƒ‰ƒtŠÔ
-Global gGphDtNum%                     'Œ‹‰ÊƒOƒ‰ƒtƒf[ƒ^”
-Global gResFlName$                    'Œ‹‰Êƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-Global gResFldir$                     'ƒfƒBƒŒƒNƒgƒŠ
-Global FlNmRecDt$                     '¬Œ`ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-Global Rec_of_Mold$                   '¬Œ`ƒf[ƒ^@•¶š•Ï”
+Global gDate$                         '???ÊƒO???t?å–†t??
+Global gTime$                         '???ÊƒO???t???ï¾”
+Global gGphDtNum%                     '???ÊƒO???t?f?[?^??
+Global gResFlName$                    '???Êƒf?[?^?t?@?C????
+Global gResFldir$                     '?f?B???N?g??
+Global FlNmRecDt$                     '???`?f?[?^?t?@?C????
+Global Rec_of_Mold$                   '???`?f?[?^?@?????Ï?
 '
-Global gErrMsg$(0 To 1, 0 To 36)      'ƒGƒ‰[ƒƒZ[ƒW
-Global gemgmsg                        'ƒGƒ‰[ƒƒZ[ƒW
+Global gErrMsg$(0 To 1, 0 To 36)      '?G???[???Z?[?W
+Global gemgmsg                        '?G???[???Z?[?W
 '
-Global kataNo$(0 To 10)                 ' Œ^‚Ìƒiƒ“ƒo[@@@'2007.11.12@tsuika
-Global kataNoHyj$(0 To 36)                    ' Œ^‚m‚D@•\¦—pƒŠƒ“ƒOƒoƒbƒtƒ@
-Global kataNoPnt As Integer                     '@Œ^No.@ƒ|ƒCƒ“ƒ^[
-Global katamax                          ' ¬Œ`‹@“à‚Ì@ƒXƒe[ƒVƒ‡ƒ“”
-'--------------- [QD61]LS21_S.C ‚Å’è‹`‚µ‚Ä‚ ‚é•Ï”
+Global kataNo$(0 To 10)                 ' ?^?Ìƒi???o?[?@?@?@'2007.11.12?@tsuika
+Global kataNoHyj$(0 To 36)                    ' ?^?m???D?@?\???p?????O?o?b?t?@
+Global kataNoPnt As Integer                     '?@?^No.?@?|?C???^?[
+Global katamax                          ' ???`?@?çƒ½ï¾Œ?@?X?e?[?V??????
+'--------------- [QD61]LS21_S.C ?Å’é—`???Ä‚??é«Ÿï¾??
 Global KeikaTime%(0 To 12000)
-Global atemp!(0 To 12000, 0 To 2)    '1801 ¨12000@‚Ö•ÏX@130425
-Global aposi!(0 To 12000)   '1801 ¨12000@‚Ö•ÏX@130425
-Global apre!(0 To 12000)   '1801 ¨12000@‚Ö•ÏX@130425
-Global roz!(2)               '@“Ë“–¬Œ`Êß×Ò°À@•,ŠÔ
+Global atemp!(0 To 12000, 0 To 2)    '1801 ??12000?@?Ö•ÏX?@130425
+Global aposi!(0 To 12000)   '1801 ??12000?@?Ö•ÏX?@130425
+Global apre!(0 To 12000)   '1801 ??12000?@?Ö•ÏX?@130425
+Global roz!(2)               '?@?Ë“????`ï¾Šï¾Ÿï¾—ï¾’?@??,???ï¾”
 Global ivd%, id_0%, id_1%, id_2%
-'--------------- è“®‚ÌˆÊ’u§Œä‘¬“xİ’è—p
-Global gHiSpeed!                      'è“®‚ÌˆÊ’u§Œä‘¬“x
-Global gLwSpeed!                      'è“®‚ÌˆÊ’u§Œä‘¬“x
-Global r_pres_kousei!                  'ˆ³—Í“Ç‚İæ‚è’l‚Ìƒ[ƒZ³
+'--------------- ?è“®?ÌˆÊ’u???ä‘¬?x?İ’é˜¯p
+Global gHiSpeed!                      '?è“®?ÌˆÊ’u???ä‘¬?x
+Global gLwSpeed!                      '?è“®?ÌˆÊ’u???ä‘¬?x
+Global r_pres_kousei!                  '???Í“Ç‚İè¬”ãƒ»l?Ìƒ[???Z??
 
-Global nout%, v!                      'cal_pid‚Ì@•Ï”@‘¬“xw—ß“dˆ³
+Global nout%, v!                      'cal_pid?Ì@?Ï??@???x?w?ß“d??
 
-Global gOrgIL As Boolean              'Œ´“_ƒCƒ“ƒ^[ƒƒbƒN
-Global gOrgStartFlg As Boolean        '‰‰ñŒ´“_•œ‹AŠ®—¹ƒtƒ‰ƒO
-Global wTm0!, wTm1!                   'Œo‰ßŠÔŒvZ—p     2004.5.12 ’Ç‰Á  "µ°ÊŞ°ÌÛ°" ‘Îô
-'  -----        2009.8.17 ’Ç‰Á
+Global gOrgIL As Boolean              '???_?C???^?[???b?N
+Global gOrgStartFlg As Boolean        '???ñŒ´“_???A?????t???O
+Global wTm0!, wTm1!                   '?o?ß??ÔŒv?Z?p     2004.5.12 ?Ç‰ï¾  "??ï¾Šï¾?ï¾Œï¾›?" ?Îãƒ»
+'  -----        2009.8.17 ?Ç‰ï¾
 Global fintime!, Tm2f1!, Tm2f2!
 Public Sub Main()
 Dim i%
 ' On Error GoTo errHandler:
-  CmndColoff(1) = &H8000000F     'I—¹ƒRƒ}ƒ“ƒh–t‚ÌF@@@@@ŠD
-  CmndColoff(3) = &HC0FFC0       'VƒGƒfƒBƒg‚ÌƒRƒ}ƒ“ƒh–t‚ÌF@@”–—Î
-  CmndColoff(9) = &HC0C0FF       '•Û‰·’â~‚ÌƒRƒ}ƒ“ƒh–t‚ÌF@@ƒsƒ“ƒN
-  CmndColoff(0) = &HFFFFC0       '5•ª’â~‚ÌƒRƒ}ƒ“ƒh–t‚ÌF@@…F
-  CmndColon(1) = vbRed '&HFF&    'ƒRƒ}ƒ“ƒh–t‚ÌF on‚Ì‚Æ‚«@Ô@@@@Ô
-  CmndColon(3) = &HC0FFC0         'ƒRƒ}ƒ“ƒh–t‚ÌF on‚Ì‚Æ‚«@”–—Î
-  CmndColon(9) = &HC0C0FF         'ƒRƒ}ƒ“ƒh–t‚ÌF on‚Ì‚Æ‚«@ƒsƒ“ƒN
-  CmndColon(0) = vbBlue        'ƒRƒ}ƒ“ƒh–t‚ÌF on‚Ì‚Æ‚«@ao
-  T_keisuCol!(0) = &HFFFFFF    '‰·“xŒW”A“÷Œú•â³@•\¦backcolor@off ŠDF
-  T_keisuCol!(1) = &HFFFFC0    '‰·“xŒW”A“÷Œú•â³@•\¦backcolor@on@…F
-  T_keisuCol!(2) = &H800012    '‰·“xŒW”A“÷Œú•â³@•\¦forecolor@on@•
-  T_keisuCol!(3) = &HFF00FF    '‰·“xŒW”A“÷Œú•â³@•\¦forecolor@on point’†@@ƒsƒ“ƒN
-  T_keisuCol!(4) = &HE0E0E0    '‰·“xŒW”A“÷Œú•â³@•\¦backcolor@dummy  …F
-  lSokuFlg = False        '‹­§ƒ\[ƒNƒ^ƒCƒ€   ’Êí‚Í@OFF
-  katCflag = False      ' ƒvƒƒOƒ‰ƒ€ŠJn‚ÍA•K‚¸‰Áˆ³§ŒäOFF
-  Karauchiflg = False      ' ƒvƒƒOƒ‰ƒ€ŠJn‚ÍAˆê’Ufalse
-  Saikaiflg = False         'ƒvƒƒOƒ‰ƒ€ŠJn‚ÍAˆê’Ufalse
+  CmndColoff(1) = &H8000000F     '?I???R?}???h?t?ÌF?@?@?@?@?@?D
+  CmndColoff(3) = &HC0FFC0       'V?G?f?B?g?ÌƒR?}???h?t?ÌF?@?@???ï¾
+  CmndColoff(9) = &HC0C0FF       '?Û‰??ç«¡~?ÌƒR?}???h?t?ÌF?@?@?s???N
+  CmndColoff(0) = &HFFFFC0       '5???ç«¡~?ÌƒR?}???h?t?ÌF?@?@???F
+  CmndColon(1) = vbRed '&HFF&    '?R?}???h?t?ÌF on?Ì‚Æ‚??@?Ô@?@?@?@?ï¾”
+  CmndColon(3) = &HC0FFC0         '?R?}???h?t?ÌF on?Ì‚Æ‚??@???ï¾
+  CmndColon(9) = &HC0C0FF         '?R?}???h?t?ÌF on?Ì‚Æ‚??@?s???N
+  CmndColon(0) = vbBlue        '?R?}???h?t?ÌF on?Ì‚Æ‚??@ao
+  T_keisuCol!(0) = &HFFFFFF    '???x?W???A?î•¯ãƒ»â³?@?\??backcolor?@off ?D?F
+  T_keisuCol!(1) = &HFFFFC0    '???x?W???A?î•¯ãƒ»â³?@?\??backcolor?@on?@???F
+  T_keisuCol!(2) = &H800012    '???x?W???A?î•¯ãƒ»â³?@?\??forecolor?@on?@??
+  T_keisuCol!(3) = &HFF00FF    '???x?W???A?î•¯ãƒ»â³?@?\??forecolor?@on point???@?@?s???N
+  T_keisuCol!(4) = &HE0E0E0    '???x?W???A?î•¯ãƒ»â³?@?\??backcolor?@dummy  ???F
+  lSokuFlg = False        '?????\?[?N?^?C??   ?Êí?Í@OFF
+  katCflag = False      ' ?v???O?????J?n???ÍA?K???H????è†‚FF
+  Karauchiflg = False      ' ?v???O?????J?n???ÍA?é½ŸUfalse
+  Saikaiflg = False         '?v???O?????J?n???ÍA?é½ŸUfalse
   katamax = 6           ' STATION SSU = 6
-  ishu = 1              ' 1T–Ú‚©‚ç@ƒXƒ^[ƒg
+  ishu = 1              ' 1?T?Ú‚??è½£@?X?^?[?g
 
 '
     For i = 0 To 9
-        kataNo(i) = Format(i + 1, "##")     ' Œ^‚m‚D‚Ì‰Šú‰»
+        kataNo(i) = Format(i + 1, "##")     ' ?^?m???D?Ì??åŒ€ï½»
     Next i
-    kataNo(10) = " 0"    ' Œ^‚m‚D’²®”‚Ì‰Šú‰»0
-'    ÀŞĞ°Œ^w’è‚Ì@reset
+    kataNo(10) = " 0"    ' ?^?m???D???????Ì??0
+'    ï¾€ï¾Ğ°?^?w?é–§ï¾Œ?@reset
   For i = 0 To 9
     iflgKataTorF(i) = True
   Next i
@@ -217,22 +217,22 @@ ppos = "KTD"
   coxDtRead gcoxFldir & gcoxFlName
   coxDtSet
   BoardInit
-  ResetOFF          '/* ƒŠƒZƒbƒg@‚‚†‚† */
-  SetErrMsg         'ƒAƒ‰[ƒ€ƒƒbƒZ[ƒW
+  ResetOFF          '/* ???Z?b?g?@?????? */
+  SetErrMsg         '?A???[?????b?Z?[?W
   'DebugData         'Debug
-  gResFlName = "*.mpr"                  'Œ‹‰Êƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-  gResFldir = App.path & "\..\data\"  'ƒfƒBƒŒƒNƒgƒŠ
+  gResFlName = "*.mpr"                  '???Êƒf?[?^?t?@?C????
+  gResFldir = App.path & "\..\data\"  '?f?B???N?g??
   'ADMain.Show
-  InitStr(2) = "roz.con"                    'ƒƒ{ƒbƒgƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-  InitStr(3) = App.path & "\..\robo\"       'ƒfƒBƒŒƒNƒgƒŠ
+  InitStr(2) = "roz.con"                    '???{?b?g?f?[?^?t?@?C????
+  InitStr(3) = App.path & "\..\robo\"       '?f?B???N?g??
   'IOChk.Show '
   ViewFlg = 1
-  gOrgFlg = False                       'Œ´“_•œ‹AŠ®—¹=TRUE
-  gTimeUpCnt = 0                    'ƒ^ƒCƒ€ƒAƒbƒv‚ÌƒJƒEƒ“ƒ^
-  gVumFlg = 0                       '^‹ó“’B=1
+  gOrgFlg = False                       '???_???A????=TRUE
+  gTimeUpCnt = 0                    '?^?C???A?b?v?ÌƒJ?E???^
+  gVumFlg = 0                       '?^?ó“’B=1
   
-'  VacuumOFF                        '2006.1221 íœ@s.f.
-  SeikeiOFF                         '2006.12.21 V‹K s.f
+'  VacuumOFF                        '2006.1221 ?íœ?@s.f.
+  SeikeiOFF                         '2006.12.21 ?V?K s.f
 '
   CoolOFF
   HeatOFF
@@ -247,10 +247,10 @@ End Sub
 Public Sub coxFlLoad()
 Dim fDir$, fname$, rflg%
     
-    fname = gcoxFlName        'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-    fDir = gcoxFldir          'ƒfƒBƒŒƒNƒgƒŠ
+    fname = gcoxFlName        '?R???g???[???f?[?^?t?@?C????
+    fDir = gcoxFldir          '?f?B???N?g??
     rflg = False
-    Call GenFile.SetCtrl("ƒtƒ@ƒCƒ‹“Ç", "“Ç", "æÁ")
+    Call GenFile.SetCtrl("?t?@?C???Ç?", "?Ç?", "?è¬ ï¾")
     Call GenFile.SetFile(cLoad, fDir, fname, "*.cox")
     GenFile.Show vbModal
     Call GenFile.GetFile(rflg, fDir, fname)
@@ -259,15 +259,15 @@ Dim fDir$, fname$, rflg%
       Screen.MousePointer = 11
       '
       coxDtRead fDir$ & fname
-      gcoxFlName = fname      'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-      gcoxFldir = fDir        'ƒfƒBƒŒƒNƒgƒŠ
+      gcoxFlName = fname      '?R???g???[???f?[?^?t?@?C????
+      gcoxFldir = fDir        '?f?B???N?g??
       '
       Screen.MousePointer = 0
     End If
 End Sub
 
 Public Sub coxDtRead(fl$)
-'@080312:@NQD‘Î‰
+'?@080312:?@NQD?Î‰?
 Dim i%, fnum%, l%
 Dim dmy$, dt$, com$, dta$(0 To 4)
 Dim iaf%, ja%
@@ -283,10 +283,10 @@ Dim lsub As Long
     Next l
     '
     For l = 0 To 2: hcomm(l) = gCoxDlDt(l): Next l
-    l = 4: ptime = Val(gCoxDlDt(l))      '‘ª’èŠÔ
-    l = 6: ytemp = Val(gCoxDlDt(l))      '—\”õ‰Á”M‰·“x
+    l = 4: ptime = Val(gCoxDlDt(l))      '???è?ï¾”
+    l = 6: ytemp = Val(gCoxDlDt(l))      '?\?î´ï¾?M???x
     l = 7
-    '²‹ì“®§ŒäƒRƒ}ƒ“ƒh‚Ì“Ç
+    '???ì“®???è‰«R?}???h?Ì“Ç?
     For i = 0 To 100
       Line Input #fnum, dt
       l = l + 1
@@ -300,7 +300,7 @@ Dim lsub As Long
       p(i) = Val(Mid(dt, 48, 6))
       If ic(i) = 9 Then Exit For
     Next i
-    'ƒf[ƒ^‚ğ“Ç‚İæ‚é
+    '?f?[?^?î’ï¾‡?İè¬”ãƒ»
     Input #fnum, dmy
     l = l + 1
     gCoxDlDt(l) = dmy
@@ -313,14 +313,14 @@ Dim lsub As Long
       isub = Val(Mid(dt, 4, 5))
       com = Left(scom(i), 1)
       Select Case com
-      Case "S", "L"                  ' 2006.5.15 "L" ’Ç‰Á s.f
+      Case "S", "L"                  ' 2006.5.15 "L" ?Ç‰ï¾ s.f
         iaf = iaf + 1
         jsub = Val(Mid(dt, 10, 5))
         ksub = Val(Mid(dt, 16, 5))
         lsub = Val(Mid(dt, 22, 5))
       Case "J"
         iaf = iaf + 1
-      Case "H"                      ' 2007.11.12 "H" ’Ç‰Á s.f
+      Case "H"                      ' 2007.11.12 "H" ?Ç‰ï¾ s.f
         iaf = iaf + 1
       Case "P"
         ja = ja + 1
@@ -334,15 +334,15 @@ Dim lsub As Long
       sksub(i) = ksub
       slsub(i) = lsub
     Next i
-'  -- ‰·“xŒW”A“÷Œú•â³ƒf[ƒ^
+'  -- ???x?W???A?î•¯ãƒ»â³?f?[?^
     Input #fnum, dmy
     l = l + 1
     gCoxDlDt(l) = dmy
     Input #fnum, T_keisuCont(0), T_keisuCont(1)
     l = l + 1
     gCoxDlDt(l) = "  " & Format(T_keisuCont(0), "0.000") & ",  " & Format(T_keisuCont(1), "0.000")
-    If (katCflag = True) Then               ' katcflagi‰Áˆ³§Œäƒtƒ‰ƒOj‚ªTrue‚È‚ç@TŒW”ƒf[ƒ^‚ğƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚Ü‚È‚¢
-            Line Input #fnum, dmy           ' ‚Ps“Ç‚İ”ò‚Î‚µ
+    If (katCflag = True) Then               ' katcflag?i?H????è‰«t???O?j??True?È‚è½£@T?W???f?[?^?î‚t?@?C?????é€‘ï¾‡?İ??Ü‚È‚?
+            Line Input #fnum, dmy           ' ?P?s?Ç‚İ”î†¹ï¾??
         Else
             Input #fnum, T_keisu(0), T_keisu(1), T_keisu(2), T_keisu(3), T_keisu(4)
     End If
@@ -354,7 +354,7 @@ Dim lsub As Long
     gCoxDlDt(l) = dt
 '
     If (katCflag = True) Then
-            Line Input #fnum, dmy                 ' katcflagi‰Áˆ³§Œäƒtƒ‰ƒOj‚ªTrue‚È‚ç@TŒW”ƒf[ƒ^‚ğƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚Ü‚È‚¢
+            Line Input #fnum, dmy                 ' katcflag?i?H????è‰«t???O?j??True?È‚è½£@T?W???f?[?^?î‚t?@?C?????é€‘ï¾‡?İ??Ü‚È‚?
         Else
             Input #fnum, T_keisu(5), T_keisu(6), T_keisu(7), T_keisu(8), T_keisu(9)
     End If
@@ -388,14 +388,14 @@ Dim lsub As Long
     gCoxDlDt(l) = dt
 '
  '
-    Input #fnum, dmy                  '  ‰Áˆ³ŠÔ§Œä‚‚‚˜A@‚‚‰‚‚Ì“Ç‚İ‚İ
+    Input #fnum, dmy                  '  ?H????Ô??ä‚?????A?@???????Ì“Ç‚İ??ï¾
     l = l + 1
     gCoxDlDt(l) = dmy
     Input #fnum, DkatJ(1), DkatJ(0)
     l = l + 1
     gCoxDlDt(l) = "  " & Format(DkatJ(1), "000.0") & ",  " & Format(DkatJ(0), "000.0")
 '
-    Input #fnum, dmy                  '  Œ^No.@ƒf[ƒ^@“Ç‚İ‚İ
+    Input #fnum, dmy                  '  ?^No.?@?f?[?^?@?Ç‚İ??ï¾
     l = l + 1
     gCoxDlDt(l) = dmy
     Input #fnum, kataNo(0), kataNo(1), kataNo(2), kataNo(3), kataNo(4), kataNo(5), kataNo(6), kataNo(7), kataNo(8)
@@ -406,7 +406,7 @@ Dim lsub As Long
     Next i
     gCoxDlDt(l) = dt
  '
-    Input #fnum, dmy                  '  ‰Áˆ³ŠÔ&Cp’l@ALARM ‚‚‚˜A@‚‚‰‚‚Ì“Ç‚İ‚İ
+    Input #fnum, dmy                  '  ?H????ï¾”&Cp?l?@ALARM ???????A?@???????Ì“Ç‚İ??ï¾
     l = l + 1
     gCoxDlDt(l) = dmy
 '
@@ -421,7 +421,7 @@ Dim lsub As Long
 '
   Close fnum
   gCoxFlDtMax = l
-  gGphDtMax = iaf       'ƒf[ƒ^” Œ³‚Íiaf
+  gGphDtMax = iaf       '?f?[?^?? ???ï¾iaf
 End Sub
 
 Public Sub InitDtLoad()
@@ -435,16 +435,16 @@ Dim fDir$, flNm$
     Input #fnum, InitDat(i), InitStr(i)
   Next i
   Close #fnum
-  'gcoxFlName = InitStr(0)       'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-  'gcoxFldir = InitStr(1)        'ƒfƒBƒŒƒNƒgƒŠ
-  'InitDat(10)=¬Œ`ƒJƒEƒ“ƒ^
-  'InitDat(11)=¬Œ`ƒJƒEƒ“ƒ^ƒgƒEƒ^ƒ‹
+  'gcoxFlName = InitStr(0)       '?R???g???[???f?[?^?t?@?C????
+  'gcoxFldir = InitStr(1)        '?f?B???N?g??
+  'InitDat(10)=???`?J?E???^
+  'InitDat(11)=???`?J?E???^?g?E?^??
 End Sub
 Public Sub InitDtSave()
 Dim i%, fnum%
 Dim fDir$, flNm$
-  InitStr(0) = gcoxFlName    'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-  InitStr(1) = gcoxFldir     'ƒfƒBƒŒƒNƒgƒŠ
+  InitStr(0) = gcoxFlName    '?R???g???[???f?[?^?t?@?C????
+  InitStr(1) = gcoxFldir     '?f?B???N?g??
   fnum = FreeFile
   fDir = App.path & "\..\Data\"
   flNm = "PGM.ini"
@@ -454,7 +454,7 @@ Dim fDir$, flNm$
   Next i
   Close #fnum
 End Sub
-Public Sub RecDtSave0(icnt!)                     '¬Œ`ƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ìì¬
+Public Sub RecDtSave0(icnt!)                     '???`?f?[?^?t?@?C???Ìì¬
 Dim j%, fnum%, sdt$
 Dim fDir$, flNm$
   fnum = FreeFile
@@ -463,13 +463,13 @@ Dim fDir$, flNm$
   FlNmRecDt = "LS" & Format$(Now, "yymmddhhmmss") & Format(Int(icnt), "0") & ".lsl"
   sdt = " No.     Z3         ct1    ct2"
   sdt = sdt & "      cc1     cc2    cc3"
-  sdt = sdt & "    cc3-2     cp         À¸Ä     TŒW”    Z3•â³"
+  sdt = sdt & "    cc3-2     cp         8ï¾„     T?W??    Z3?â³"
   Open fDir & FlNmRecDt For Output As #fnum
      Write #fnum, gcoxFlName & "   " & Date$ & "   " & Time$
      Write #fnum, sdt
   Close #fnum
 End Sub
-Public Sub RecDtSave999()            '¬Œ`ƒf[ƒ^‚ÌƒZ[ƒu‚ÌI—¹ˆ—@@ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^‚ğ’Ç‰Á@@2009.9.12’Ç‰Á
+Public Sub RecDtSave999()            '???`?f?[?^?ÌƒZ?[?u?ÌI???????@?@?R???g???[???f?[?^?î‘ï¾‡?A@?@2009.9.12?Ç‰ï¾
 Dim j%, fnum%, l%
 Dim fDir$
   fnum = FreeFile
@@ -480,7 +480,7 @@ Dim fDir$
     Next l
   Close #fnum
 End Sub
-Public Sub RecDtSave(Rec_of_Mold$)            '¬Œ`ƒf[ƒ^‚ÌƒZ[ƒu
+Public Sub RecDtSave(Rec_of_Mold$)            '???`?f?[?^?ÌƒZ?[?u
 Dim j%, fnum%
 Dim fDir$
   fnum = FreeFile
@@ -489,7 +489,7 @@ Dim fDir$
      Write #fnum, Rec_of_Mold & "   " & Time$
   Close #fnum
 End Sub
-Public Sub RecEmgDtSave(sdt1$, sdt2$, sdt3$)            '”ñí’â~ƒf[ƒ^‚ÌƒZ[ƒu  2004.3.8 ’Ç‰Á@s.f
+Public Sub RecEmgDtSave(sdt1$, sdt2$, sdt3$)            '?î„Šãƒ»ç«¡~?f?[?^?ÌƒZ?[?u  2004.3.8 ?Ç‰A@s.f
 Dim j%, fnum%
 Dim fDir$, emgmsg$, flNm$
   fnum = FreeFile
@@ -514,7 +514,7 @@ Dim fDir$, flNm$
   Write #fnum, Time
   Write #fnum, i
   For j = 0 To i
-    Write #fnum, Format(Int(KeikaTime(j) / 60), "  0•ª") & Format(Int(KeikaTime(j)) Mod 60, " 0•b"), atemp(j, 0), atemp(j, 1), atemp(j, 2), apre(j), aposi(j)
+    Write #fnum, Format(Int(KeikaTime(j) / 60), "  0??") & Format(Int(KeikaTime(j)) Mod 60, " 0?b"), atemp(j, 0), atemp(j, 1), atemp(j, 2), apre(j), aposi(j)
   Next j
   Close #fnum
 End Sub
@@ -534,10 +534,10 @@ End Sub
 Public Sub ResFlLoad()
 Dim fDir$, fname$, rflg%
     
-    fname = gResFlName        'Œ‹‰Êƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-    fDir = gResFldir          'ƒfƒBƒŒƒNƒgƒŠ
+    fname = gResFlName        '???Êƒf?[?^?t?@?C????
+    fDir = gResFldir          '?f?B???N?g??
     rflg = False
-    Call GenFile.SetCtrl("ƒtƒ@ƒCƒ‹“Ç", "“Ç", "æÁ")
+    Call GenFile.SetCtrl("?t?@?C???Ç?", "?Ç?", "?è¬ ï¾")
     Call GenFile.SetFile(cLoad, fDir, fname, "*.mpr")
     GenFile.Show vbModal
     Call GenFile.GetFile(rflg, fDir, fname)
@@ -546,14 +546,14 @@ Dim fDir$, fname$, rflg%
       Screen.MousePointer = 11
       '
       ResDtLoad fDir, fname
-      gResFlName = fname      'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-      gResFldir = fDir        'ƒfƒBƒŒƒNƒgƒŠ
+      gResFlName = fname      '?R???g???[???f?[?^?t?@?C????
+      gResFldir = fDir        '?f?B???N?g??
       '
       Screen.MousePointer = 0
     End If
 End Sub
 ' ---------------------------------------------------------
-Public Sub coxDtSet()       '@cox ƒf[ƒ^‚Ì@•Û‘¶—pu1ƒ‰ƒCƒ“‚Ì•¶šƒf[ƒ^v•ÏŠ·
+Public Sub coxDtSet()       '?@cox ?f?[?^?Ì@?Û‘??p?u1???C???Ì•????f?[?^?v?ÏŠ?
 Dim i%, fnum%, l%
 Dim dmy$, dt$, com$
 Dim iaf%, ja%
@@ -563,10 +563,10 @@ Dim ksub As Long
 Dim lsub As Long
 
     For l = 0 To 2: gCoxDlDt(l) = hcomm(l): Next l
-    l = 4: gCoxDlDt(l) = ptime    '‘ª’èŠÔ
-    l = 6: gCoxDlDt(l) = ytemp    '—\”õ‰Á”M‰·“x
+    l = 4: gCoxDlDt(l) = ptime    '???è?ï¾”
+    l = 6: gCoxDlDt(l) = ytemp    '?\?î´ï¾?M???x
     l = 7
-    '²‹ì“®§ŒäƒRƒ}ƒ“ƒh‚Ì“Ç
+    '???ì“®???è‰«R?}???h?Ì“Ç?
     For i = 0 To 100
       l = l + 1
       dt = gCoxDlDt(l)
@@ -581,7 +581,7 @@ Dim lsub As Long
       gCoxDlDt(l) = dt
       If ic(i) = 9 Then Exit For
     Next i
-    'ƒf[ƒ^‚ğ“Ç‚İæ‚é
+    '?f?[?^?î’ï¾‡?İè¬”ãƒ»
     l = l + 1
     '
     ja = 0
@@ -596,7 +596,7 @@ Dim lsub As Long
       Mid(dt, 4, 5) = Right("     " & Format(isub, "0"), 5)
       com = Left(scom(i), 1)
       Select Case com
-      Case "S", "L"                    ' 2006.5.15 "L" ’Ç‰Á s.f
+      Case "S", "L"                    ' 2006.5.15 "L" ?Ç‰ï¾ s.f
         Mid(dt, 10, 5) = Right("     " & Format(jsub, "0"), 5)
         Mid(dt, 16, 5) = Right("     " & Format(ksub, "0"), 5)
         Mid(dt, 22, 5) = Right("     " & Format(lsub, "0"), 5)
@@ -612,8 +612,8 @@ Dim lsub As Long
 
       gCoxDlDt(l) = dt
     Next i
-'  -- ‰·“xŒW”A“÷Œú•â³ƒf[ƒ^
-    l = l + 1   ' ƒRƒƒ“ƒgs
+'  -- ???x?W???A?î•¯ãƒ»â³?f?[?^
+    l = l + 1   ' ?R?????g?s
     l = l + 1
     gCoxDlDt(l) = "  " & Format(T_keisuCont(0), "0.000") & ",  " & Format(T_keisuCont(1), "0.000")
     l = l + 1
@@ -630,7 +630,7 @@ Dim lsub As Long
     Next i
     gCoxDlDt(l) = dt
  '
-    l = l + 1  '  ƒRƒƒ“ƒgs
+    l = l + 1  '  ?R?????g?s
     l = l + 1
     gCoxDlDt(l) = "  " & Format(Z3_HoseiCont(0), "0.000") & ",  " & Format(Z3_HoseiCont(1), "0.000") & ",  " & Format(Z3_HoseiCont(2), "0.000")
     l = l + 1
@@ -648,14 +648,14 @@ Dim lsub As Long
     gCoxDlDt(l) = dt
 '
 '
-  '  ‰Áˆ³ŠÔ§Œä‚‚‚˜A@‚‚‰‚‚Ì‘‚«‚İ
-    l = l + 1   ' ƒRƒƒ“ƒgs
+  '  ?H????Ô??ä‚?????A?@???????Ì??????ï¾
+    l = l + 1   ' ?R?????g?s
     l = l + 1
     dt = "  " & Format(DkatJ(1), "000.0") & ",  " & Format(DkatJ(0), "000.0")
     gCoxDlDt(l) = dt
 '
-  '  Œ^No.@ƒf[ƒ^@‚Ì‘‚«‚İ
-    l = l + 1   ' ƒRƒƒ“ƒgs
+  '  ?^No.?@?f?[?^?@?Ì??????ï¾
+    l = l + 1   ' ?R?????g?s
     l = l + 1
     dt = "  " & kataNo(0)
     For i = 1 To 8
@@ -663,8 +663,8 @@ Dim lsub As Long
     Next i
     gCoxDlDt(l) = dt
 '
-'  ‰Áˆ³ŠÔ@•@‚b‚’l@‚`‚Œ‚‚’‚@‚‚‚˜A@‚‚‰‚‚Ì‘‚«‚İ
-    l = l + 1   ' ƒRƒƒ“ƒgs
+'  ?H????Ô@???@?b???l?@?`?????????@???????A?@???????Ì??????ï¾
+    l = l + 1   ' ?R?????g?s
     l = l + 1
     dt = "  " & Format(AkatJ(1), "0") & ",  " & Format(AkatJ(0), "0")
     gCoxDlDt(l) = dt
@@ -690,10 +690,10 @@ Dim i%
 Dim z!, p!, t!, x!
 '
   For i = 0 To ResDtSize
-    TPass(i) = i                'Œo‰ßŠÔ(•b)
-    ZAxis(i) = 50 + 40 * Sin(i / 57.325)              'À•WiZ-²j
-    Press(i) = i / 2000              'Œ^’÷ˆ³
-    Templ(i) = 500 + 100 * Sin(i / 57.325)       'Œ^‰·“x
+    TPass(i) = i                '?o?ß??ï¾”(?b)
+    ZAxis(i) = 50 + 40 * Sin(i / 57.325)              '?W?iZ-???j
+    Press(i) = i / 2000              '?^?î•«ï½³
+    Templ(i) = 500 + 100 * Sin(i / 57.325)       '?^???x
   Next i
 End Sub
 
@@ -747,16 +747,16 @@ Dim fDir$, flNm$
   fDir = InitStr(3)
   flNm = InitStr(2)
   Open fDir & flNm For Input As #fnum
-    Input #fnum, pv_ch                  'ˆÊ’uE‘¬“xƒ‚[ƒhØŠ·“_
-    Input #fnum, roz(0), roz(1)         '“Ë“–¬Œ`Êß×Ò°À@•AŠÔ (ŠÔmax180j
-    Input #fnum, VccLw, VccHi           'ƒsƒ‰ƒjƒQ[ƒW—p
-    Input #fnum, gM_sa, gM_p, gM_lim    '‘¬“x§Œä‚Ìƒpƒ‰ƒ[ƒ^
-    Input #fnum, gHiSpeed, gLwSpeed     'è“®‚ÌˆÊ’u§Œä‘¬“x
-    Input #fnum, r_pres_kousei          'ˆ³—Í“Çæ’l@‚OZ³
+    Input #fnum, pv_ch                  '?Ê’u?E???x???[?h?ØŠ??_
+    Input #fnum, roz(0), roz(1)         '?Ë“????`ï¾Šï¾Ÿï¾—ï¾’?@???A???ï¾” (???ï¾”max180?j
+    Input #fnum, VccLw, VccHi           '?s???j?Q?[?W?p
+    Input #fnum, gM_sa, gM_p, gM_lim    '???x???è‰ªï¾Œ?p?????[?^
+    Input #fnum, gHiSpeed, gLwSpeed     '?è“®?ÌˆÊ’u???ä‘¬?x
+    Input #fnum, r_pres_kousei          '???Í“Çè¬¦l?@?O?Z??
   Close #fnum
-'gM_sa!     'ƒƒjƒ…[‚Ì‘¬“x§Œä‚Ì‚Ì/* İ’èˆ³—Í */
-'gM_p!      'ƒƒjƒ…[‚Ì‘¬“x§Œä‚Ì‚Ì/* İ’è‚o’l */
-'gM_lim!    'ƒƒjƒ…[‚Ì‘¬“x§Œä‚Ì‚Ì/* İ’èƒŠƒ~ƒbƒg’l */
+'gM_sa!     '???j???[?Ì‘??x???è‰ªï¾Œ???ï¾Œ/* ?İ’èˆ³?ï¾ */
+'gM_p!      '???j???[?Ì‘??x???è‰ªï¾Œ???ï¾Œ/* ?İ’é–§o?l */
+'gM_lim!    '???j???[?Ì‘??x???è‰ªï¾Œ???ï¾Œ/* ?İ’èƒŠ?~?b?g?l */
 End Sub
 Public Sub rozFileSave()
 Dim i%, fnum%
@@ -766,11 +766,11 @@ Dim fDir$, flNm$
   flNm = InitStr(2)
   Open fDir & flNm For Output As #fnum
     Write #fnum, pv_ch
-    Write #fnum, roz(0), roz(1)        '“Ë“–¬Œ`Êß×Ò°À@•AŠÔ
+    Write #fnum, roz(0), roz(1)        '?Ë“????`ï¾Šï¾Ÿï¾—ï¾’?@???A???ï¾”
     Write #fnum, VccLw, VccHi
     Write #fnum, gM_sa, gM_p, gM_lim
-    Write #fnum, gHiSpeed, gLwSpeed    'è“®‚ÌˆÊ’u§Œä‘¬“x
-    Write #fnum, r_pres_kousei          'ˆ³—Í“Çæ’l@‚OZ³
+    Write #fnum, gHiSpeed, gLwSpeed    '?è“®?ÌˆÊ’u???ä‘¬?x
+    Write #fnum, r_pres_kousei          '???Í“Çè¬¦l?@?O?Z??
   Close #fnum
 End Sub
 Public Sub ExecMemo(DDir$, flNm$)
@@ -778,13 +778,13 @@ Dim ExecFl$, fl$
 Dim r!
   fl = DDir$ & flNm
   ExecFl = "C:\WINDOWS\NOTEPAD.EXE " & fl
-'-------- ƒƒ‚’ ‚Åfl‚ğŠJ‚­
+'-------- ???????ï¾…fl?î‰J??
   r = Shell(ExecFl, 1)
-  AppActivate r, True     'ƒƒ‚’ ‚ª•Â‚¶‚é‚Ü‚Å‘Ò‚Â
+  AppActivate r, True     '?????????Â‚??é©ï¾œ?Å‘Ò‚ï¾‚
 End Sub
-Public Function diffTime!(wTm1!, wTm0!)  '  '02.6.29  abs ŠO‚·   !“ü‚ê‚é 10/4 sf
+Public Function diffTime!(wTm1!, wTm0!)  '  '02.6.29  abs ?O??   !?ãƒ»ãƒ»ãƒ»10/4 sf
 'Dim wTm0!, wTm1!
-'-------------- o@wTm1iŒ»İj|@wTm0(‰ß‹) pŠÔ‚ğSec‚ÅŒvZ
+'-------------- ?o?@wTm1?i???İj?|?@wTm0(?ß‹?) ?p???Ô‚î€“ec?ÅŒv?Z
   If wTm0 > wTm1 Then
     diffTime = wTm1 + H24Hr - wTm0
   Else
@@ -817,8 +817,8 @@ Dim fDir$, flNm$
   fDir = App.path & "\..\cont\"
   flNm = "cfile.con"
   Open fDir & flNm For Input As #fnum
-    Input #fnum, gcoxFlName       'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-    Input #fnum, gcoxFldir        'ƒfƒBƒŒƒNƒgƒŠ
+    Input #fnum, gcoxFlName       '?R???g???[???f?[?^?t?@?C????
+    Input #fnum, gcoxFldir        '?f?B???N?g??
   Close #fnum
 End Sub
 Public Sub cfileSave()
@@ -828,12 +828,12 @@ Dim fDir$, flNm$
   fDir = App.path & "\..\cont\"
   flNm = "cfile.con"
   Open fDir & flNm For Output As #fnum
-    Write #fnum, gcoxFlName       'ƒRƒ“ƒgƒ[ƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
-    Write #fnum, gcoxFldir        'ƒfƒBƒŒƒNƒgƒŠ
+    Write #fnum, gcoxFlName       '?R???g???[???f?[?^?t?@?C????
+    Write #fnum, gcoxFldir        '?f?B???N?g??
   Close #fnum
 End Sub
 Public Sub WaitSec(t As Single)
-'’PˆÊ •b
+'?P?ï¾Š ?b
 Dim tm!, InTm!, NTm!
   tm = 0
   InTm = Timer
@@ -852,40 +852,40 @@ End Sub
 
 Public Sub SetErrMsg()
 Dim ErrNo%, EmgArm%
-  EmgArm = 0          '”ñí’â~
+  EmgArm = 0          '?î„Šãƒ»ç«¡~
   ErrNo = 0: gErrMsg$(EmgArm, ErrNo) = "System not ready" '
-  ErrNo = 1: gErrMsg$(EmgArm, ErrNo) = "‚o‚b¨”ñí’â~" 'ƒGƒ‰[ƒƒZ[ƒW
-  ErrNo = 2: gErrMsg$(EmgArm, ErrNo) = "–{‘Ì@”ñí’â~‚r‚v"
-  ErrNo = 3: gErrMsg$(EmgArm, ErrNo) = "§Œä”Õ@”ñí’â~‚r‚v" '@f08.3@•\¦“à—e“ü‘Ö
-  ErrNo = 4: gErrMsg$(EmgArm, ErrNo) = "‚ü”g‚h‚g“dŒ¹‚`‚k‚l@¬Œ`º"
-  ErrNo = 5: gErrMsg$(EmgArm, ErrNo) = "¬Œ`ºãŒ^ƒq[ƒ^[ALM"
-  ErrNo = 6: gErrMsg$(EmgArm, ErrNo) = "ƒT[ƒ{ƒ‚[ƒ^ˆÙí"
-  ErrNo = 7: gErrMsg$(EmgArm, ErrNo) = "ƒ`ƒƒƒ“ƒoˆ³ˆÙí"
-  ErrNo = 8: gErrMsg$(EmgArm, ErrNo) = "ƒyƒ‹ƒWƒƒˆ³ˆÙí"
-  ErrNo = 9: gErrMsg$(EmgArm, ErrNo) = "¬Œ`º@‰·’²Ší‚`‚k‚l"
-  ErrNo = 10: gErrMsg$(EmgArm, ErrNo) = "”À‘—’†‚ÉORG‚ªØ‚ê‚½"
-  ErrNo = 11: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”M‡@‚g‚e“dŒ¹‚`‚k‚l"
-  ErrNo = 12: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”M‡@‰·’²Ší‚`‚k‚l"
-  ErrNo = 13: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”M‡A‚h‚g“dŒ¹‚`‚k‚l"
-  ErrNo = 14: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”M‡A‰·’²Ší‚`‚k‚l"
-  ErrNo = 15: gErrMsg$(EmgArm, ErrNo) = "¬Œ`º‰ºŒ^ƒq[ƒ^[ALM"
-  EmgArm = 1          'ƒAƒ‰[ƒ€
-  ErrNo = 0: gErrMsg$(EmgArm, ErrNo) = "‚`‚k‚l@‚O@i–¢g—pj" 'ƒGƒ‰[ƒƒZ[ƒW
-  ErrNo = 1: gErrMsg$(EmgArm, ErrNo) = "ƒyƒ‹ƒWƒƒ–¢“’B" 'ƒGƒ‰[ƒƒZ[ƒW
-  ErrNo = 2: gErrMsg$(EmgArm, ErrNo) = "ƒe[ƒuƒ‹–¢“’B"
-  ErrNo = 3: gErrMsg$(EmgArm, ErrNo) = "ƒpƒŒƒbƒg‚R–¢“’B"
-  ErrNo = 4: gErrMsg$(EmgArm, ErrNo) = "ƒpƒŒƒbƒg‚S–¢“’B"
-  ErrNo = 5: gErrMsg$(EmgArm, ErrNo) = "ƒpƒŒƒbƒg‚Q–¢“’B"
-  ErrNo = 6: gErrMsg$(EmgArm, ErrNo) = "ƒpƒŒƒbƒg‚P–¢“’B"
-  ErrNo = 7: gErrMsg$(EmgArm, ErrNo) = "‚`‚k‚l‚Vi–¢g—pj"
-  ErrNo = 8: gErrMsg$(EmgArm, ErrNo) = "¬Œ`º‰·“xˆÙí"
-  ErrNo = 9: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”M‚Q‰·“xˆÙí"
-  ErrNo = 10: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”M‚P‰·“xˆÙí"
-  ErrNo = 11: gErrMsg$(EmgArm, ErrNo) = "…—â‹pƒVƒŠƒ“ƒ_[‰º–¢“’B"
-  ErrNo = 12: gErrMsg$(EmgArm, ErrNo) = "^‹ó–¢“’B"
-  ErrNo = 13: gErrMsg$(EmgArm, ErrNo) = "…—â‹pƒVƒŠƒ“ƒ_[ã–¢“’B"
-  ErrNo = 14: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”M‰ºˆÚ“®–¢“’B"
-  ErrNo = 15: gErrMsg$(EmgArm, ErrNo) = "—\”õ‰Á”MãˆÚ“®–¢“’B"
+  ErrNo = 1: gErrMsg$(EmgArm, ErrNo) = "?o?b???î„Šãƒ»ç«¡~" '?G???[???Z?[?W
+  ErrNo = 2: gErrMsg$(EmgArm, ErrNo) = "?{?Ì@?î„Šãƒ»ç«¡~?r?v"
+  ErrNo = 3: gErrMsg$(EmgArm, ErrNo) = "???è‹³ï¾•?@?î„Šãƒ»ç«¡~?r?v" '?@?f08.3?@?\???ç‡‰e?ãƒ»ï¾–
+  ErrNo = 4: gErrMsg$(EmgArm, ErrNo) = "???ãƒ»g?h?g?d???`?k?l?@???`??"
+  ErrNo = 5: gErrMsg$(EmgArm, ErrNo) = "???`???ç¹»^?q?[?^?[ALM"
+  ErrNo = 6: gErrMsg$(EmgArm, ErrNo) = "?T?[?{???[?^?Ùãƒ»
+  ErrNo = 7: gErrMsg$(EmgArm, ErrNo) = "?`?????o???Ùãƒ»
+  ErrNo = 8: gErrMsg$(EmgArm, ErrNo) = "?y???W?????Ùãƒ»
+  ErrNo = 9: gErrMsg$(EmgArm, ErrNo) = "???`???@?????å¢²`?k?l"
+  ErrNo = 10: gErrMsg$(EmgArm, ErrNo) = "?????ï¾‰ORG???Ø‚ê‚½"
+  ErrNo = 11: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M?@?g?e?d???`?k?l"
+  ErrNo = 12: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M?@?????å¢²`?k?l"
+  ErrNo = 13: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M?A?h?g?d???`?k?l"
+  ErrNo = 14: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M?A?????å¢²`?k?l"
+  ErrNo = 15: gErrMsg$(EmgArm, ErrNo) = "???`?????^?q?[?^?[ALM"
+  EmgArm = 1          '?A???[??
+  ErrNo = 0: gErrMsg$(EmgArm, ErrNo) = "?`?k?l?@?O?@?i???g?p?j" '?G???[???Z?[?W
+  ErrNo = 1: gErrMsg$(EmgArm, ErrNo) = "?y???W???????B" '?G???[???Z?[?W
+  ErrNo = 2: gErrMsg$(EmgArm, ErrNo) = "?e?[?u???????B"
+  ErrNo = 3: gErrMsg$(EmgArm, ErrNo) = "?p???b?g?R?????B"
+  ErrNo = 4: gErrMsg$(EmgArm, ErrNo) = "?p???b?g?S?????B"
+  ErrNo = 5: gErrMsg$(EmgArm, ErrNo) = "?p???b?g?Q?????B"
+  ErrNo = 6: gErrMsg$(EmgArm, ErrNo) = "?p???b?g?P?????B"
+  ErrNo = 7: gErrMsg$(EmgArm, ErrNo) = "?`?k?l?V?i???g?p?j"
+  ErrNo = 8: gErrMsg$(EmgArm, ErrNo) = "???`?????x?Ùãƒ»
+  ErrNo = 9: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M?Q???x?Ùãƒ»
+  ErrNo = 10: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M?P???x?Ùãƒ»
+  ErrNo = 11: gErrMsg$(EmgArm, ErrNo) = "???ç«™p?V?????_?[???????B"
+  ErrNo = 12: gErrMsg$(EmgArm, ErrNo) = "?^?ó–¢“??B"
+  ErrNo = 13: gErrMsg$(EmgArm, ErrNo) = "???ç«™p?V?????_?[?ã–¢???B"
+  ErrNo = 14: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M???Ú“??????B"
+  ErrNo = 15: gErrMsg$(EmgArm, ErrNo) = "?\?î´ï¾?M?ç¹¹ï¾š???????B"
 End Sub
 Public Sub DispCenter(frmObj As Form)
   Dim dmy As Long

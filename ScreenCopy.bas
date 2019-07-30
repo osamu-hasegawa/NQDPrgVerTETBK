@@ -1,25 +1,25 @@
 Attribute VB_Name = "ScreenCopy"
-'ƒXƒNƒŠ[ƒ“‚ÌƒXƒiƒbƒvƒVƒ‡ƒbƒg‚ğƒNƒŠƒbƒvƒ{[ƒh‚É•Û‘¶‹y‚Ñˆóü@@•Ï”éŒ¾•”@@i273j '
+'?X?N???[???ÌƒX?i?b?v?V???b?g?î‚N???b?v?{?[?h?É•Û‘??y?ÑˆîŠ€ãƒ»@?@?Ï??éŒ¾???@?@?i273?j '
 
 Private Declare Sub keybd_event Lib "user32.dll" _
         (ByVal bVk As Byte, ByVal bScan As Byte, _
          ByVal dwFlags As Long, ByVal dwExtraInfo As Long)
 
-Private Const VK_SNAPSHOT = &H2C            'PrintScreen ƒL[(P1051)
-Private Const VK_LMENU = &HA4               'AltƒL[
-Private Const KEYEVENTF_KEYUP = &H2         'ƒL[‚ÍƒAƒbƒvó‘Ô
-Private Const KEYEVENTF_EXTENDEDKEY = &H1   'ƒXƒLƒƒƒ“ƒR[ƒh‚ÍŠg’£ƒR[ƒh
+Private Const VK_SNAPSHOT = &H2C            'PrintScreen ?L?[(P1051)
+Private Const VK_LMENU = &HA4               'Alt?L?[
+Private Const KEYEVENTF_KEYUP = &H2         '?L?[?ÍƒA?b?v?îŠ„ï¾”
+Private Const KEYEVENTF_EXTENDEDKEY = &H1   '?X?L?????R?[?h?ÍŠg???R?[?h
 
 
 
-'ƒXƒNƒŠ[ƒ“‚ÌƒXƒiƒbƒvƒVƒ‡ƒbƒg‚ğƒNƒŠƒbƒvƒ{[ƒh‚É•Û‘¶‹y‚Ñˆóü@–{‘Ì@@@@@i273j '
+'?X?N???[???ÌƒX?i?b?v?V???b?g?î‚N???b?v?{?[?h?É•Û‘??y?ÑˆîŠ€ãƒ»@?{?Ì@?@?@?@?@?i273?j '
 
 Private Sub SaveWindowPic(Optional ActWind As Boolean = True, _
                                     Optional PrintOn As Boolean = False)
-'ƒXƒNƒŠ[ƒ“‚ÌƒXƒiƒbƒvƒVƒ‡ƒbƒg‚ğƒNƒŠƒbƒvƒ{[ƒh‚É•Û‘¶‹y‚Ñˆóü@@@@@@@@@i273j '
-'ƒtƒH[ƒ€‚ÉCommandƒ{ƒ^ƒ“‚ğ‚QŒÂ“\‚è•t‚¯‚Ä‚¨‚¢‚Ä‰º‚³‚¢B
-'@ Option Explicit@@ 'SampleNo=273@WindowsXP VB6.0(SP5) 2003.03.30
-'ƒL[ƒXƒgƒ[ƒN‚ğƒVƒ~ƒ…ƒŒ[ƒg‚·‚é(P1065)
+'?X?N???[???ÌƒX?i?b?v?V???b?g?î‚N???b?v?{?[?h?É•Û‘??y?ÑˆîŠ€ãƒ»@?@?@?@?@?@?@?@?@?i273?j '
+'?t?H?[???ï¾‰Command?{?^???îQ?Â“\?é˜¨t???Ä‚????Ä‰??????B
+'?@ Option Explicit?@?@ 'SampleNo=273?@WindowsXP VB6.0(SP5) 2003.03.30
+'?L?[?X?g???[?N?î‚V?~?????[?g???ãƒ»P1065)
 
     Dim MyFileName As String, PicData As Picture, OsVer As Single
     Dim sngSt As Single
@@ -28,9 +28,9 @@ Private Sub SaveWindowPic(Optional ActWind As Boolean = True, _
     OsVer = CreateObject("SysInfo.SYSINFO").OSVersion
 
     If ActWind Then
-    'ƒAƒNƒeƒBƒu ƒEƒBƒ“ƒhƒE‚ÌƒXƒiƒbƒvƒVƒ‡ƒbƒg‚ğæ“¾‚·‚é
-    'ˆÈ‰º‚Ì‚Q•û–@‚Ç‚ê‚Å‚àOK(Win98SE/WinXP/Win95j
-    '‚Ç‚Ì•û–@‚Å‚àã‹LŠm”F‹@í‚Í“¯‚¶“®ì‚µ‚Ü‚·‚Ì‚ÅMS‚ÌƒTƒ“ƒvƒ‹‚Ì•û–@‚ğg—p
+    '?A?N?e?B?u ?E?B???h?E?ÌƒX?i?b?v?V???b?g?îãƒ»????ãƒ»
+    '?È‰??Ì‚Q?è‡@?Ç‚é»·ï¾…?æ¾K(Win98SE/WinXP/Win95?j
+    '?Ç‚Ì•è‡@?Å‚ç†„ãƒ»L?m?F?@?å¢²ï¾???????ì‚µ?Ü‚??Ì‚ï¾…MS?ÌƒT???v???Ì•è‡@?îg?p
         Call keybd_event(VK_LMENU, &H56, _
                                 KEYEVENTF_EXTENDEDKEY Or 0, 0)
         Call keybd_event(VK_SNAPSHOT, &H79, _
@@ -39,40 +39,40 @@ Private Sub SaveWindowPic(Optional ActWind As Boolean = True, _
                                 KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
         Call keybd_event(VK_LMENU, &H56, _
                                 KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
-'@@@@==================== ‚±‚¿‚ç‚Å‚à“¯‚¶‚æ‚¤‚Å‚· ==================
-'@@@@Call keybd_event(VK_LMENU, 0, _
-@@@@@@@@@@@@@@@@KEYEVENTF_EXTENDEDKEY Or 0, 0)
-'@@@@Call keybd_event(VK_SNAPSHOT, 0, _
-@@@@@@@@@@@@@@@@KEYEVENTF_EXTENDEDKEY Or 0, 0)
-'@@@@Call keybd_event(VK_SNAPSHOT, 0, _
-@@@@@@@@@@@KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
-'@@@@Call keybd_event(VK_LMENU, 0, _
-@@@@@@@@@@@KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
+'?@?@?@?@==================== ?????è½¤ï¾…?Ó¯???æ‚¤?Å‚? ==================
+'?@?@?@?@Call keybd_event(VK_LMENU, 0, _
+?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@KEYEVENTF_EXTENDEDKEY Or 0, 0)
+'?@?@?@?@Call keybd_event(VK_SNAPSHOT, 0, _
+?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@?@KEYEVENTF_EXTENDEDKEY Or 0, 0)
+'?@?@?@?@Call keybd_event(VK_SNAPSHOT, 0, _
+?@?@?@?@?@?@?@?@?@?@?@KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
+'?@?@?@?@Call keybd_event(VK_LMENU, 0, _
+?@?@?@?@?@?@?@?@?@?@?@KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
     ElseIf ActWind = False And OsVer < 5 Then
-    '‰æ–Ê‘S‘Ì‚ÌƒXƒiƒbƒvƒVƒ‡ƒbƒg‚ğæ“¾‚·‚é(Win98SE/Win95)
+    '?è­ï¾Š?S?Ì‚ÌƒX?i?b?v?V???b?g?îãƒ»????ãƒ»Win98SE/Win95)
         Call keybd_event(VK_SNAPSHOT, 1, KEYEVENTF_EXTENDEDKEY, 0)
         Call keybd_event(VK_SNAPSHOT, 1, KEYEVENTF_EXTENDEDKEY Or _
                                                                           KEYEVENTF_KEYUP, 0)
     Else
-    '‰æ–Ê‘S‘Ì‚ÌƒXƒiƒbƒvƒVƒ‡ƒbƒg‚ğæ“¾‚·‚é(WinXP)
+    '?è­ï¾Š?S?Ì‚ÌƒX?i?b?v?V???b?g?îãƒ»????ãƒ»WinXP)
         Call keybd_event(VK_SNAPSHOT, 0, KEYEVENTF_EXTENDEDKEY, 0)
         Call keybd_event(VK_SNAPSHOT, 0, KEYEVENTF_EXTENDEDKEY Or _
                                                                           KEYEVENTF_KEYUP, 0)
     End If
 
-    sngSt = Timer                           ' Windows7 ‚É‚ÍA‚±‚Ì’x‰„Loop‚ª•K—v
+    sngSt = Timer                           ' Windows7 ?É‚ÍA???Ì’x??Loop???K?v
     Do While Timer - sngSt < 0.5
        DoEvents
     Loop
-    'ƒNƒŠƒbƒvƒ{[ƒh“à‚Éƒrƒbƒgƒ}ƒbƒvŒ`®‚Ìƒf[ƒ^‚ª‚ ‚é‚©’²‚×‚é
+    '?N???b?v?{?[?h?çƒ½ï¾‰?r?b?g?}?b?v?`???Ìƒf?[?^?????é‚©???×‚ãƒ»
     If Clipboard.GetFormat(vbCFBitmap) Then
-        'ƒtƒ@ƒCƒ‹–¼‚ğ©“®¶¬
+        '?t?@?C?????î©“?????
         MyFileName = App.path & "\" & gcoxFlName$ & Format$(Now, "yymmddhhmmss") & ".BMP"
-        '•\¦ƒf[ƒ^[‚ğƒrƒbƒgƒ}ƒbƒvŒ`®‚Ìƒf[ƒ^‚Å•Û‘¶
+        '?\???f?[?^?[?î‚r?b?g?}?b?v?`???Ìƒf?[?^?Å•Û‘?
         Set PicData = Clipboard.GetData
         Call SavePicture(PicData, MyFileName)
         If PrintOn Then
-            'ˆóü‚·‚éê‡
+            '?îŠ€ãƒ»??é«€ãƒ»?
             With Printer
                 .ScaleMode = vbMillimeters
                 .PaperSize = vbPRPSA4
@@ -82,54 +82,54 @@ Private Sub SaveWindowPic(Optional ActWind As Boolean = True, _
             End With
         End If
     Else
-        MsgBox "•Û‘¶o—ˆ‚Ü‚¹‚ñ‚Å‚µ‚½B"
+        MsgBox "?Û‘??o???Ü‚??îƒ½ï¾…?????B"
     End If
 End Sub
 '
 '
 '
 'Private Sub Command1_Click()
-''ƒAƒNƒeƒBƒuƒEƒCƒ“ƒhƒE‚Ì‚İ‚ğƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[
-'    Call SaveWindowPic(True, False)     'ˆóü‚·‚éê‡‚Í@True ‚Éİ’è
+''?A?N?e?B?u?E?C???h?E?Ì‚İ‚î‚N???b?v?{?[?h?ÉƒR?s?[
+'    Call SaveWindowPic(True, False)     '?îŠ€ãƒ»??é«€ãƒ»??Í@True ?Éİ’ãƒ»
 'End Sub
 '
 'Private Sub Command2_Click()
-''ƒXƒNƒŠ[ƒ“‘S‘Ì‚ğƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[
+''?X?N???[???S?Ì‚î‚N???b?v?{?[?h?ÉƒR?s?[
 '    Call SaveWindowPic(False, False)
 'End Sub
 
 
 
 
-NQD@Vb‚Ìê‡
-ƒNQD70_SC„‚Ö’Ç‰Á
-ƒtƒ‰ƒO‚Ì’Ç‰Á@@–`“ª‚ÌéŒ¾•”
-Dim iflgSCopy As Boolean   ' ScreenCopy ƒtƒ‰ƒO
+NQD?@Vb?Ìê‡
+??NQD70_SC???Ö’Ç‰ï¾
+?t???O?Ì’Ç‰A@?@?`???ÌéŒ¾??
+Dim iflgSCopy As Boolean   ' ScreenCopy ?t???O
 
-ƒƒRƒ}ƒ“ƒhƒ{ƒ^ƒ“‚Ì’Ç‰Á„
+???R?}???h?{?^???Ì’Ç‰A?
 Private Sub Command3_Click()
-'''ƒAƒNƒeƒBƒuƒEƒCƒ“ƒhƒE‚ğƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[ˆóü‚·‚éB@True ‚Éİ’è
+'''?A?N?e?B?u?E?C???h?E?î‚N???b?v?{?[?h?ÉƒR?s?[?îŠ€ãƒ»??é©•B?@True ?Éİ’ãƒ»
   If iflgSCopy = True Then
-          iflgSCopy = False          'ScreenCopy@ó•t‰ğœ
+          iflgSCopy = False          'ScreenCopy?@?îŠˆt?îãƒ»
           Command3.BackColor = CmndColoff(0)
     Else
-          iflgSCopy = True      'ScreenCopy@ó•t
+          iflgSCopy = True      'ScreenCopy?@?îŠˆt
           Command3.BackColor = CmndColon(1)    ' on 1=red
   End If
 End Sub
 
-<NQD70_SC‚Ì–{‘Ì‚Ö‚Ì@call•¶’Ç‰Á„
->'/* ƒf[ƒ^‚Ì•Û‘¶@*/
+<NQD70_SC?Ì–{?Ì‚Ö‚Ì@call???Ç‰A?
+>'/* ?f?[?^?Ì•Û‘??@*/
 >      If lDtSaveFlg = True Then
 >        ResDtSave i_s, stime
 >        lDtSaveFlg = False
 >      End If
 '
-' ScreenCopy iflgSCopy=True ‚Ìê‡AScreenCopy
+' ScreenCopy iflgSCopy=True ?Ìê‡?AScreenCopy
     If iflgSCopy = True Then
-        Call SaveWindowPic(True, False)     'Active Window‚Ì•Û‘¶
+        Call SaveWindowPic(True, False)     'Active Window?Ì•Û‘?
     End If
-    iflgSCopy = False          'ScreenCopy@ó•t‰ğœ
+    iflgSCopy = False          'ScreenCopy?@?îŠˆt?îãƒ»
     Command3.BackColor = CmndColoff(0)
 '
 
