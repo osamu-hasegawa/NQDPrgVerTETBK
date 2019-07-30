@@ -238,7 +238,7 @@ Begin VB.Form NQD70_SC
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   984
+      Height          =   1140
       Left            =   2088
       TabIndex        =   77
       Top             =   1080
@@ -2694,11 +2694,11 @@ Case 5      '"Save" ;データセーブ
   
     If lDtSaveFlg = True Then
           lDtSaveFlg = False          'データセーブ　受付解除
-          Command2(5).BackColor = SokuCor(0)
+          Command2(5).BackColor = CmndColoff(1)    ' off gray
           Command2(5).Caption = "Save"
     Else
           lDtSaveFlg = True           'データセーブ　受付
-          Command2(5).BackColor = SokuCor(1)
+          Command2(5).BackColor = CmndColon(1)   ' on 1= red
           Command2(5).Caption = "DataSave中"
   End If
 '
@@ -2820,7 +2820,6 @@ Dim i%, p%, max!, min!, def!, dev%
   Next i
 '
 End Sub
-
 Private Sub Timer1_Timer()
   Timer1.Enabled = False
   LS21S_MAIN
@@ -4026,6 +4025,7 @@ cjump:
         Unload frmerr_sign
       End If
 '
+    KeikaTime(i) = it + 1
 '/*　温度取り込み */
 '          DoEvents               '2005.12.17 OverFlow 対策 s.f.
           atemp(i, 0) = TempRdMold(0)   'スリーブ温度 0V-300℃ 1V-1300℃
@@ -4244,7 +4244,7 @@ send:
         ResDtSave i_s, stime
         lDtSaveFlg = False          'データセーブ　受付解除
 '
-        Command2(5).BackColor = SokuCor(0)
+        Command2(5).BackColor = CmndColoff(1)    ' off gray
         Command2(5).Caption = "Save"
        End If
 '

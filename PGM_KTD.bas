@@ -508,14 +508,12 @@ Dim j%, fnum%
 Dim fDir$, flNm$
   fnum = FreeFile
   fDir = App.path & "\..\data\"
-'  flNm = Mid(Date, 4, 2) & Mid(Date, 7, 2) & Trim(Str(i_s)) & "d.mpr"
   flNm = Format$(Now, "yymmddhhmmss") & Trim(Str(i_s)) & "d.mpr"
   Open fDir & flNm For Output As #fnum
-  Write #fnum, Date
+  Write #fnum, Date, gcoxFlName
   Write #fnum, Time
   Write #fnum, i
   For j = 0 To i
-'    Write #fnum, atemp(j, 0), atemp(j, 1), apre(j), aposi(j)
     Write #fnum, Format(Int(KeikaTime(j) / 60), "  0•ª") & Format(Int(KeikaTime(j)) Mod 60, " 0•b"), atemp(j, 0), atemp(j, 1), atemp(j, 2), apre(j), aposi(j)
   Next j
   Close #fnum
